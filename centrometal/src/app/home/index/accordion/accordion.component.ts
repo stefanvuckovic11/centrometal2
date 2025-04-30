@@ -11,7 +11,7 @@ interface AccordionItem {
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss'],
-  standalone:false
+  standalone : false
 })
 export class AccordionComponent {
   items: AccordionItem[] = [
