@@ -1,0 +1,38 @@
+<div class="slider">
+  <div class="slider__track" #track>
+    <div
+      class="slider__slide"
+      *ngFor="let slide of slides; let i = index"
+    >
+      <img
+        class="slider__image"
+        [src]="'images/sega.jpg'"
+        [alt]="slide.alt"
+      />
+      <div class="slider__content">
+        <span class="slider__label slider__label--line1">
+          {{ slide.line1 }}
+        </span>
+        <span class="slider__label slider__label--line2">
+          {{ slide.line2 }}
+        </span>
+        <a
+          class="slider__button"
+          [href]="slide.buttonLink"
+        >
+          {{ slide.buttonText }}
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="slider__pagination">
+    <span
+      class="slider__pagination-item"
+      *ngFor="let slide of slides; let i = index"
+      [class.slider__pagination-item--active]="i === currentIndex"
+      (click)="goTo(i)"
+    >
+      {{ i + 1 }}
+    </span>
+  </div>
+</div>
