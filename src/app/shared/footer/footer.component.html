@@ -1,0 +1,49 @@
+<footer class="footer">
+  <div class="footer__slider">
+    <div class="footer__slider-inner" #inner>
+      <div class="footer__slider-track" #track>
+        <div class="footer__slider-slide" *ngFor="let brand of brands">
+          <img
+            [src]="brand.img"
+            [alt]="brand.name"
+            class="footer__slider-img"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="footer__buttons">
+      <button
+        #prevBtn
+        class="footer__buttons__slider-prev"
+        (click)="slidePrev()"
+      >&lt;</button>
+
+      <button
+        #nextBtn
+        class="footer__buttons__slider-next"
+        (click)="slideNext()"
+      >&gt;</button>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom-columns">
+      <div class="footer__bottom-column" *ngFor="let col of linkColumns">
+        <h3 class="footer__bottom-title">{{ col.title }}</h3>
+        <a
+          *ngFor="let link of col.links"
+          [routerLink]="link.url"
+          class="footer__bottom-link"
+        >
+          {{ link.label }}
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copy">
+    <p class="footer__copy-text">
+      © 2016 Copyright by
+      <a routerLink="/" class="footer__copy-link">centrometal.me</a>
+      All Rights Reserved.
+    </p>
+  </div>
+</footer>

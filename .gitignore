@@ -1,1 +1,17 @@
+# ignore all node modules
 node_modules/
+
+# (optional) some other typical ignores
+dist/
+.DS_Store
+.env
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/node_modules
