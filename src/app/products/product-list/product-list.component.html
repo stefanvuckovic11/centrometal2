@@ -1,0 +1,38 @@
+<div *ngIf="loading" class="product-list__spinner">
+    <img
+            class="product-list__spinner__image"
+            ngSrc="/images/spinner.gif"
+            alt="Loading…"
+            width="193"
+            height="192"
+    />
+</div>
+<div *ngIf="!loading" class="product-list">
+    <div *ngFor="let category of productsByCategory | keyvalue" class="product-list__category">
+        <h2 class="product-list__category__title">{{ category.key | titlecase }}</h2>
+        <div class="product-list__category__cards">
+            <div *ngFor="let product of category.value" class="product-list__category__cards__card">
+                <img
+                        class="product-list__category__cards__card__image"
+                        [ngSrc]="product.mainImage"
+                        [alt]="product.title"
+                        width="200"
+                        height="200"
+                />
+                <h3 class="product-list__category__cards__card__title">{{ product.title }}</h3>
+                <p class="product-list__category__cards__card__description">{{ product.description }}</p>
+                <div class="product-list__category__cards__card__prices">
+          <span
+                  class="product-list__category__cards__card__prices__old"
+                  *ngIf="product.price.old"
+          >
+            €{{ product.price.old }}
+          </span>
+                    <span class="product-list__category__cards__card__prices__new">
+            €{{ product.price.new }}
+          </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
