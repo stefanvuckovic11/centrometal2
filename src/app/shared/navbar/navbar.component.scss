@@ -292,7 +292,6 @@
       clip-path: none;
       padding: 30px 40px;
       justify-content: center;
-      background: linear-gradient(to right, #3b7c7c 50%, $general-cyan 50%);
       z-index: 999999;
 
       &--open-product {
@@ -312,7 +311,7 @@
         position: absolute;
         font-size: 18px;
         left: 45%;
-        top: 20px;
+        top: 15px;
         transform: translateX(-50%);
         z-index: 1000;
 

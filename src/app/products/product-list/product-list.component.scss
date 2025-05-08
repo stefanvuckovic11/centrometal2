@@ -1,0 +1,134 @@
+@import '../../../styles/_variables.scss';
+
+
+.product-list {
+  width: 100%;
+  padding-right: 1.25rem;
+  margin: 0 auto;
+
+  &__category {
+    margin-bottom: 2rem;
+
+    &__header {
+      position: relative;
+      margin: 0 auto 1rem;
+      width: 80%;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 50px solid $general-cyan;
+      transform: rotateX(180deg);
+      z-index: -1;
+
+    }
+
+    &__header-text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) rotateX(180deg);
+      color: #fff;
+      font-size: 2rem;
+      white-space: nowrap;
+      z-index: 0;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      justify-content: center;
+      gap: $product-card-gap;
+
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: $breakpoint-sm) {
+        grid-template-columns: 1fr;
+      }
+
+      &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        border-radius: 0.25rem;
+        box-sizing: border-box;
+
+        &__badge {
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+          background: #f3ae00;
+          color: #fff;
+          padding: 0.25rem 0.5rem;
+          font-size: 0.75rem;
+          font-weight: bold;
+          border-radius: 999px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: -0.4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 0.4rem solid transparent;
+            border-right-color: #f3ae00;
+          }
+        }
+
+        &__image {
+          width: 100%;
+          max-width: 200px;
+          height: 200px;
+          object-fit: contain;
+          margin-bottom: 0.5rem;
+        }
+
+        &__name {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+          min-height: 1.5em;
+        }
+
+        &__description {
+          font-size: 0.875rem;
+          color: #666;
+          margin-bottom: 0.5rem;
+          min-height: 2.5em;
+        }
+
+        &__timer {
+          font-size: 0.75rem;
+          color: #999;
+          margin-bottom: 0.75rem;
+        }
+
+        &__price {
+          margin-top: auto;
+          padding: 0.5rem 0;
+          border-top: 1px solid #ddd;
+          border-bottom: 1px solid #ddd;
+          display: flex;
+          align-items: baseline;
+          gap: 0.5rem;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+
+        &__price-old {
+          color: #999;
+          text-decoration: line-through;
+        }
+
+        &__price-new {
+          color: $general-cyan;
+        }
+      }
+    }
+  }
+}

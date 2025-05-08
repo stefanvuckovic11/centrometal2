@@ -1,12 +1,18 @@
-import { NgModule } from '@angular/core';
+import { NgModule }                     from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { RouterModule }                 from '@angular/router';
+import { NavbarComponent }              from './navbar/navbar.component';
+import { FooterComponent }              from './footer/footer.component';
 
 @NgModule({
-  declarations: [NavbarComponent, FooterComponent],
-  imports: [CommonModule, RouterModule, NgOptimizedImage],
-  exports: [NavbarComponent, FooterComponent]
+  declarations: [ NavbarComponent, FooterComponent ],
+  imports:      [ CommonModule, RouterModule, NgOptimizedImage ],
+  exports:     [
+    CommonModule,
+    RouterModule,
+    NgOptimizedImage,
+    NavbarComponent,
+    FooterComponent
+  ]
 })
 export class SharedModule {}

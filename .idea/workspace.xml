@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="products">
+      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fake-api/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/fake-api/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index/index.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/index.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index/slider/slider.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/slider/slider.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/products.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/products.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/navbar/navbar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;stefanvuckovic11&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/stefanvuckovic11/centrometal2.git&quot;,
+    &quot;accountId&quot;: &quot;2f139b6c-fa11-4197-b0fb-19f97f04f4fd&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2wLx9ev6tDHiTRuv1pQXsKRQObg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;products&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/synergysuite/WebstormProjects/centrometal2/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/centrometal/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/centrometal/src/app" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="" />
+      <created>1745834504340</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745834504340</updated>
+      <workItem from="1745834505447" duration="9161000" />
+      <workItem from="1745912327223" duration="4595000" />
+      <workItem from="1745918373751" duration="8559000" />
+      <workItem from="1745939684490" duration="202000" />
+      <workItem from="1746000066609" duration="5047000" />
+      <workItem from="1746006024194" duration="3367000" />
+      <workItem from="1746291438432" duration="4796000" />
+      <workItem from="1746600923873" duration="17626000" />
+      <workItem from="1746687302744" duration="11006000" />
+    </task>
+    <task id="LOCAL-00001" summary="--init commit">
+      <option name="closed" value="true" />
+      <created>1745936720487</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745936720487</updated>
+    </task>
+    <task id="LOCAL-00002" summary="--init commit">
+      <option name="closed" value="true" />
+      <created>1746000856192</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746000856192</updated>
+    </task>
+    <task id="LOCAL-00003" summary="--init commit">
+      <option name="closed" value="true" />
+      <created>1746004462688</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746004462688</updated>
+    </task>
+    <task id="LOCAL-00004" summary="--init commit">
+      <option name="closed" value="true" />
+      <created>1746004526767</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746004526767</updated>
+    </task>
+    <task id="LOCAL-00005" summary="--init commit">
+      <option name="closed" value="true" />
+      <created>1746004579972</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746004579972</updated>
+    </task>
+    <task id="LOCAL-00006" summary="--init commit">
+      <option name="closed" value="true" />
+      <created>1746005642066</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746005642066</updated>
+    </task>
+    <task id="LOCAL-00007" summary="--init commit">
+      <option name="closed" value="true" />
+      <created>1746005944454</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746005944454</updated>
+    </task>
+    <task id="LOCAL-00008" summary="--init commit">
+      <option name="closed" value="true" />
+      <created>1746006247463</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746006247463</updated>
+    </task>
+    <task id="LOCAL-00009" summary="products">
+      <option name="closed" value="true" />
+      <created>1746626357028</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746626357028</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="--init commit" />
+    <MESSAGE value="products" />
+    <option name="LAST_COMMIT_MESSAGE" value="products" />
+  </component>
+</project>
