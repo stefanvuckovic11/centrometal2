@@ -12,11 +12,9 @@ export class ProductService {
             .pipe(
                 map(list =>
                     list.map(p => {
-                        // ensure mainImage starts with '/'
                         if (p.mainImage && !p.mainImage.startsWith('/')) {
                             p.mainImage = '/' + p.mainImage;
                         }
-                        // existing discount logic…
                         const discount = parseFloat(
                             p.discount?.toString().replace(/[^\d.]/g, '') || '0'
                         );

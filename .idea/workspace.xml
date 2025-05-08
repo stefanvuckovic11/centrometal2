@@ -4,21 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="--init commit">
-      <change afterPath="$PROJECT_DIR$/fake-api/db.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fake-api/products.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fake-api/routes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fake-api/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/products/products.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proxy.conf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+    <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="products">
+      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fake-api/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/fake-api/products.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/products/products-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/products-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/products/products.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/products.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/shared.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index/index.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/index.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index/slider/slider.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/slider/slider.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/products.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/products.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/navbar/navbar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="slider&amp;accordion" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +56,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;products&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -100,7 +98,8 @@
       <workItem from="1746000066609" duration="5047000" />
       <workItem from="1746006024194" duration="3367000" />
       <workItem from="1746291438432" duration="4796000" />
-      <workItem from="1746600923873" duration="14819000" />
+      <workItem from="1746600923873" duration="17626000" />
+      <workItem from="1746687302744" duration="11006000" />
     </task>
     <task id="LOCAL-00001" summary="--init commit">
       <option name="closed" value="true" />
@@ -166,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746006247463</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="products">
+      <option name="closed" value="true" />
+      <created>1746626357028</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746626357028</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +181,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="--init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="--init commit" />
+    <MESSAGE value="products" />
+    <option name="LAST_COMMIT_MESSAGE" value="products" />
   </component>
 </project>

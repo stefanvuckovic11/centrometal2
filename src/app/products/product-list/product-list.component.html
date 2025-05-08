@@ -1,38 +1,54 @@
-<div *ngIf="loading" class="product-list__spinner">
-    <img
-            class="product-list__spinner__image"
-            ngSrc="/images/spinner.gif"
-            alt="Loading…"
-            width="193"
-            height="192"
-    />
-</div>
 <div *ngIf="!loading" class="product-list">
-    <div *ngFor="let category of productsByCategory | keyvalue" class="product-list__category">
-        <h2 class="product-list__category__title">{{ category.key | titlecase }}</h2>
-        <div class="product-list__category__cards">
-            <div *ngFor="let product of category.value" class="product-list__category__cards__card">
-                <img
-                        class="product-list__category__cards__card__image"
-                        [ngSrc]="product.mainImage"
-                        [alt]="product.title"
-                        width="200"
-                        height="200"
-                />
-                <h3 class="product-list__category__cards__card__title">{{ product.title }}</h3>
-                <p class="product-list__category__cards__card__description">{{ product.description }}</p>
-                <div class="product-list__category__cards__card__prices">
-          <span
-                  class="product-list__category__cards__card__prices__old"
-                  *ngIf="product.price.old"
-          >
-            €{{ product.price.old }}
-          </span>
-                    <span class="product-list__category__cards__card__prices__new">
-            €{{ product.price.new }}
-          </span>
-                </div>
+    <ng-container *ngFor="let category of productsByCategory | keyvalue">
+        <section class="product-list__category">
+            <div class="product-list__category__header">
+                            <span class="product-list__category__header-text">
+        {{ category.key | titlecase }}
+      </span>
             </div>
-        </div>
-    </div>
+
+            <div class="product-list__category__list">
+                <ng-container *ngFor="let product of category.value">
+                    <div class="product-list__category__list__card">
+                        <div
+                                *ngIf="product.discount"
+                                class="product-list__category__list__card__badge"
+                        >
+                            {{ product.discount }} OFF
+                        </div>
+                        <img
+                                class="product-list__category__list__card__image"
+                                [ngSrc]="product.mainImage"
+                                [alt]="product.title"
+                                width="200"
+                                height="200"
+                        />
+                        <h3 class="product-list__category__list__card__name">
+                            {{ product.title }}
+                        </h3>
+                        <p class="product-list__category__list__card__description">
+                            {{ product.description }}
+                        </p>
+                        <div
+                                *ngIf="product.timer"
+                                class="product-list__category__list__card__timer"
+                        >
+                            {{ product.timer }}
+                        </div>
+                        <div class="product-list__category__list__card__price">
+              <span
+                      *ngIf="product.price.old"
+                      class="product-list__category__list__card__price-old"
+              >
+                {{ product.price.old }}
+              </span>
+                            <span class="product-list__category__list__card__price-new">
+                &euro;{{ product.price.new }}
+              </span>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </section>
+    </ng-container>
 </div>

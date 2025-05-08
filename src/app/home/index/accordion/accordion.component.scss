@@ -1,7 +1,7 @@
 @import "../../../../styles/variables";
 
+
 .index__left__accordion {
-  /* container */
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -10,8 +10,8 @@
   margin-bottom: 3.5%;
   border: 1px solid rgba(128, 128, 128, 0.37);
   border-radius: 3px;
+  margin-left: 5%;
 
-  /* header */
   &__header {
     background: $navbar-dark-blue;
     color: white;
@@ -22,21 +22,17 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
-
-    &-icon {
-      font-size: 30px;
-    }
-    &-text {
-      /* no extra styles in OG */
-    }
   }
 
-  /* each item */
+  &__header-icon {
+    font-size: 30px;
+  }
+
   &__item {
     border-bottom: 1px solid grey;
+    width: 100%;
   }
 
-  /* title line (clickable) */
   &__title {
     background: white;
     color: black;
@@ -49,40 +45,39 @@
     align-items: center;
     text-decoration: none;
     transition: background 0.3s ease-in-out;
+    width: 100%;
 
     &:hover {
       background-color: rgba(128, 128, 128, 0.43);
     }
   }
 
-  /* the “+” / “–” icon */
   &__icon {
     font-weight: bold;
   }
 
-  /* the expanding content */
   &__content {
     background: white;
     padding: 10px 0;
     font-size: 14px;
     border-top: 1px solid grey;
-    /* visibility is toggled by *ngIf, so no need for display:none here */
+    width: 100%;
   }
 
-  /* the list inside */
   &__list {
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
 
-  /* each list item */
   &__list-item {
     padding: 12px 20px;
     font-size: 14px;
     border-bottom: 1px solid grey;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
+    width: 100%;
 
     &:last-child {
       border-bottom: none;
@@ -94,50 +89,41 @@
   }
 }
 
-/* responsive adjustments from OG */
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1400px) {
   .index__left__accordion {
-    max-width: 850px;
-    margin-left: -290px;
-    margin-top: 40px;
-    border: transparent;
+    width: 100%;
+    margin: 20px auto;
+    border: none;
+  }
 
-    &__header {
-      width: 60px;
-      margin-left: 455px;
-      margin-top: -105px;
-      height: 50px;
-      background: $general-cyan;
-      position: relative;
-      z-index: 999999;
-      margin-bottom: 40px;
-    }
+  .index__left__accordion__header {
+    width: 100%;
+    margin: 0;
+    background: $general-cyan;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+  }
 
-    &__header-icon {
-      display: flex;
-      font-size: 40px;
-      position: relative;
-      z-index: 999999;
-    }
+  .index__left__accordion__header-text {
+    display: none;
+  }
 
-    &__header-text {
-      display: none;
-    }
+  .index__left__accordion__item,
+  .index__left__accordion__title,
+  .index__left__accordion__list-item {
+    width: 100%;
+  }
 
-    &__item {
-      width: 880px;
-    }
+  .index__left__accordion__title {
+    color: white;
+    background-color: $general-cyan;
+    font-size: 18px;
+  }
 
-    &__title {
-      color: white;
-      background-color: $general-cyan;
-      font-size: 24px;
-    }
-
-    &__list-item {
-      font-size: 20px;
-      color: white;
-      background-color: $general-cyan;
-    }
+  .index__left__accordion__list-item {
+    font-size: 16px;
+    color: white;
+    background-color: $general-cyan;
   }
 }
