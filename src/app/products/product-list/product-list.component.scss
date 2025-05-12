@@ -6,6 +6,11 @@
   padding-right: 1.25rem;
   margin: 0 auto;
 
+  &__loader{
+    align-self: center;
+    justify-self: center;
+  }
+
   &__category {
     margin-bottom: 2rem;
 
@@ -39,12 +44,6 @@
       justify-content: center;
       gap: $product-card-gap;
 
-      @media (max-width: $breakpoint-md) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      @media (max-width: $breakpoint-sm) {
-        grid-template-columns: 1fr;
-      }
 
       &__card {
         position: relative;
@@ -128,6 +127,27 @@
         &__price-new {
           color: $general-cyan;
         }
+      }
+    }
+  }
+}
+
+
+@media (max-width: $breakpoint-md) {
+  .product-list {
+    &__category {
+      &__list{
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .product-list {
+    &__category {
+      &__list{
+        grid-template-columns: 1fr;
       }
     }
   }

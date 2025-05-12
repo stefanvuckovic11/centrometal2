@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import {Observable, map, delay} from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
     constructor(private http: HttpClient) {}
 
+
     getProducts(): Observable<any[]> {
         return this.http
-            .get<any[]>('http://localhost:3000/products')
+            .get<{ products: any[] }>('http://localhost:3000/products')
             .pipe(
+                delay(2000),
+                map(body => body.products),
                 map(list =>
                     list.map(p => {
                         if (p.mainImage && !p.mainImage.startsWith('/')) {

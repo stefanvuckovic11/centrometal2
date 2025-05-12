@@ -1,54 +1,76 @@
+<div *ngIf="loading" class="product-list__loader">
+    <img
+            class="product-list__loader__image"
+            ngSrc="/images/spinner.gif"
+            alt="Loading…"
+            width="193"
+            height="192"
+    />
+</div>
+
 <div *ngIf="!loading" class="product-list">
     <ng-container *ngFor="let category of productsByCategory | keyvalue">
         <section class="product-list__category">
+
             <div class="product-list__category__header">
-                            <span class="product-list__category__header-text">
-        {{ category.key | titlecase }}
-      </span>
+        <span class="product-list__category__header-text">
+          {{ category.key | titlecase }}
+        </span>
             </div>
 
-            <div class="product-list__category__list">
+            <div *ngIf="category.value?.length; else noProducts"
+                 class="product-list__category__list">
+
                 <ng-container *ngFor="let product of category.value">
                     <div class="product-list__category__list__card">
-                        <div
-                                *ngIf="product.discount"
-                                class="product-list__category__list__card__badge"
-                        >
+
+                        <div *ngIf="product?.discount"
+                             class="product-list__category__list__card__badge">
                             {{ product.discount }} OFF
                         </div>
+
                         <img
+                                *ngIf="product?.mainImage"
                                 class="product-list__category__list__card__image"
                                 [ngSrc]="product.mainImage"
-                                [alt]="product.title"
+                                [alt]="product?.title"
                                 width="200"
                                 height="200"
                         />
+
                         <h3 class="product-list__category__list__card__name">
-                            {{ product.title }}
+                            {{ product?.title }}
                         </h3>
                         <p class="product-list__category__list__card__description">
-                            {{ product.description }}
+                            {{ product?.description }}
                         </p>
-                        <div
-                                *ngIf="product.timer"
-                                class="product-list__category__list__card__timer"
-                        >
+
+                        <div *ngIf="product?.timer"
+                             class="product-list__category__list__card__timer">
                             {{ product.timer }}
                         </div>
-                        <div class="product-list__category__list__card__price">
-              <span
-                      *ngIf="product.price.old"
-                      class="product-list__category__list__card__price-old"
-              >
-                {{ product.price.old }}
-              </span>
-                            <span class="product-list__category__list__card__price-new">
-                &euro;{{ product.price.new }}
-              </span>
-                        </div>
+
+                        <ng-container *ngIf="product?.price as price">
+                            <div class="product-list__category__list__card__price">
+                <span *ngIf="price.old"
+                      class="product-list__category__list__card__price-old">
+                  {{ price.old }}
+                </span>
+                                <span class="product-list__category__list__card__price-new">
+                  €{{ price.new }}
+                </span>
+                            </div>
+                        </ng-container>
+
                     </div>
                 </ng-container>
             </div>
+
+            <ng-template #noProducts>
+                <p class="product-list__category__empty">
+                    No products available in this category.
+                </p>
+            </ng-template>
         </section>
     </ng-container>
 </div>

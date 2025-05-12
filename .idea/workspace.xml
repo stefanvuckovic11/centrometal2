@@ -5,18 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="products">
+      <change afterPath="$PROJECT_DIR$/fake-api/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/interfaces/accordion-item.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/interfaces/product.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/interfaces/slide.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps_ssr/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps_ssr/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/centrometal2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/centrometal2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fake-api/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/fake-api/products.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fake-api/*.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fake-api/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fake-api/routes.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/index/index.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/index.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/index/slider/slider.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/slider/slider.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index/slider/slider.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/slider/slider.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/products.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/products.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/products/products.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/products.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/navbar/navbar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +65,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;products&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#2 on products&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -75,6 +84,21 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/centrometal/src/app" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -100,6 +124,8 @@
       <workItem from="1746291438432" duration="4796000" />
       <workItem from="1746600923873" duration="17626000" />
       <workItem from="1746687302744" duration="11006000" />
+      <workItem from="1746784381799" duration="5226000" />
+      <workItem from="1747033841167" duration="4239000" />
     </task>
     <task id="LOCAL-00001" summary="--init commit">
       <option name="closed" value="true" />
@@ -178,6 +204,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="--init commit" />
