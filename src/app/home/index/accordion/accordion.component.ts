@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 
-interface AccordionItem {
-  title: string;
-  children?: string[];
-  link?: string;
-  expanded?: boolean;
-}
+import { AccordionItem } from '../../../interfaces/accordion-item';
 
 @Component({
   selector: 'app-accordion',

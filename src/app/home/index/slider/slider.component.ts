@@ -7,13 +7,7 @@ import {
   Renderer2
 } from '@angular/core';
 
-interface Slide {
-  alt: string;
-  line1: string;
-  line2: string;
-  buttonText: string;
-  buttonLink?: string;
-}
+import { Slide } from '../../../interfaces/slide';
 
 @Component({
   selector: 'app-slider',
