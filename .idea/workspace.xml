@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="products">
-      <change afterPath="$PROJECT_DIR$/src/app/interfaces/accordion-item.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/interfaces/slide.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps_ssr/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps_ssr/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/centrometal2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/centrometal2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/accordion/accordion.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/index/slider/slider.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/slider/slider.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/index.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +34,13 @@
     &quot;assignee&quot;: &quot;stefanvuckovic11&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/stefanvuckovic11/centrometal2.git",
-    "accountId": "2f139b6c-fa11-4197-b0fb-19f97f04f4fd"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/stefanvuckovic11/centrometal2.git&quot;,
+    &quot;accountId&quot;: &quot;2f139b6c-fa11-4197-b0fb-19f97f04f4fd&quot;
   },
-  "editorReviewEnabled": false
-}]]></component>
+  &quot;editorReviewEnabled&quot;: false
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -115,7 +115,8 @@
       <workItem from="1746687302744" duration="11006000" />
       <workItem from="1746784381799" duration="5226000" />
       <workItem from="1747033841167" duration="4239000" />
-      <workItem from="1747041250432" duration="465000" />
+      <workItem from="1747041250432" duration="6113000" />
+      <workItem from="1747119946087" duration="2026000" />
     </task>
     <task id="LOCAL-00001" summary="--init commit">
       <option name="closed" value="true" />
@@ -197,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747041401303</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="products">
+      <option name="closed" value="true" />
+      <created>1747042998216</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747042998216</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,0 +1,44 @@
+@import '../../../styles/_variables.scss';
+
+.brand-search {
+  margin-top: 50px;
+  background-color: $navbar-dark-blue;
+  padding: 10px 25px 40px;
+  color: white;
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 5%;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  &__button {
+    background-color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+
+    &-icon {
+      color: $general-cyan;
+    }
+  }
+}
