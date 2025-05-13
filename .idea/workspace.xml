@@ -4,35 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="-">
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_common.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_common_http.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_common_http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_platform-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_platform-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_router.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-AKFTAZAO.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-AKFTAZAO.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-CBL76AAY.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-CBL76AAY.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-MHVWG4J6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-MHVWG4J6.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-P6U2JBMQ.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-P6U2JBMQ.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-QXOIBFPJ.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-QXOIBFPJ.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-XSU6HIPG.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/chunk-XSU6HIPG.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/rxjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/rxjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/brand-promo/brand-promo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/brand-promo/brand-promo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.html" afterDir="false" />
-    </list>
+    <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="kit and promo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,22 +40,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "kit-promo",
-    "last_opened_file_path": "/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
-    "ts.external.directory.path": "/Users/synergysuite/WebstormProjects/centrometal2/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;kit-promo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/synergysuite/WebstormProjects/centrometal2/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/centrometal/public" />
@@ -134,7 +106,7 @@
       <workItem from="1746784381799" duration="5226000" />
       <workItem from="1747033841167" duration="4239000" />
       <workItem from="1747041250432" duration="6113000" />
-      <workItem from="1747119946087" duration="8892000" />
+      <workItem from="1747119946087" duration="9194000" />
     </task>
     <task id="LOCAL-00001" summary="--init commit">
       <option name="closed" value="true" />
@@ -232,7 +204,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747122552900</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="kit and promo">
+      <option name="closed" value="true" />
+      <created>1747145206305</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747145206305</updated>
+    </task>
+    <task id="LOCAL-00014" summary="kit and promo">
+      <option name="closed" value="true" />
+      <created>1747145443766</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1747145443766</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +241,7 @@
     <MESSAGE value="--init commit" />
     <MESSAGE value="products" />
     <MESSAGE value="-" />
-    <option name="LAST_COMMIT_MESSAGE" value="-" />
+    <MESSAGE value="kit and promo" />
+    <option name="LAST_COMMIT_MESSAGE" value="kit and promo" />
   </component>
 </project>
