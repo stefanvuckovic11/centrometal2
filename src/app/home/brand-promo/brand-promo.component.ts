@@ -14,7 +14,7 @@ import {
 export class BrandPromoComponent implements OnInit {
   @Input() delay = 0;
 
-  isVisible = false;
+  isVisible = true;
   private showTimeout?: ReturnType<typeof setTimeout>;
 
   ngOnInit(): void {

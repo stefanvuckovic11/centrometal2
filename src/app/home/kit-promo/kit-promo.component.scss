@@ -1,0 +1,62 @@
+:host {
+  display: block;
+}
+
+.promo-card {
+  margin-top: 10%;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  &__media {
+    &__wrapper {
+      &__image {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  &__body {
+    padding: 1rem;
+
+    &__heading {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #333;
+      margin: 0 0 0.5rem;
+    }
+
+    &__text {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0 0 1rem;
+      line-height: 1.4;
+    }
+
+    &__actions {
+      &__button {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        background-color: #2196f3;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.9rem;
+
+        &:hover {
+          background-color: #1976d2;
+        }
+
+        &__text {
+          // you could adjust letter-spacing or other tweaks here
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<div class="newsletter">
+    <div class="newsletter__header">
+        <i class="fa fa-envelope newsletter__icon"></i>
+        <span class="newsletter__title">PRIJAVI SE NA NEWSLETTER</span>
+    </div>
+
+    <form class="newsletter__form" (ngSubmit)="onSubmit()" #f="ngForm">
+        <input
+                type="email"
+                name="email"
+                [(ngModel)]="email"
+                class="newsletter__input-email"
+                placeholder="E-mail"
+                required
+        />
+
+        <input
+                type="text"
+                name="name"
+                [(ngModel)]="name"
+                class="newsletter__input-name"
+                placeholder="Ime i prezime"
+                required
+        />
+
+        <button
+                type="submit"
+                class="newsletter__submit"
+                [disabled]="f.invalid"
+        >
+            PRIJAVI SE
+        </button>
+    </form>
+</div>

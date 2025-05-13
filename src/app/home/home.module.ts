@@ -11,6 +11,8 @@ import { ProductsModule }       from '../products/products.module';
 import { BrandPromoComponent } from './brand-promo/brand-promo.component';
 import { BrandSearchComponent } from './brand-search/brand-search.component';
 import {FormsModule} from "@angular/forms";
+import { NewsletterComponent } from './newsletter/newsletter.component';
+import { KitPromoComponent } from './kit-promo/kit-promo.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {FormsModule} from "@angular/forms";
     AccordionComponent,
     SliderComponent,
     BrandPromoComponent,
-    BrandSearchComponent
+    BrandSearchComponent,
+    NewsletterComponent,
+    KitPromoComponent
   ],
   imports: [
     CommonModule,
