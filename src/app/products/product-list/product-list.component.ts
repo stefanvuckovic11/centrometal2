@@ -1,21 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule, NgIf, NgForOf, KeyValuePipe, TitleCasePipe, NgOptimizedImage } from '@angular/common';
 import { ProductService } from '../products.service';
 import { ProductsByCategory } from '../../interfaces/product';
 
 @Component({
   selector: 'app-product-list',
-  standalone: true,
-  imports: [
-    CommonModule,
-    NgIf,
-    NgForOf,
-    KeyValuePipe,
-    TitleCasePipe,
-    NgOptimizedImage
-  ],
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  styleUrls: ['./product-list.component.scss'],
+  standalone: false
 })
 export class ProductListComponent implements OnInit {
   productsByCategory: ProductsByCategory = {};

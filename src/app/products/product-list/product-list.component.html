@@ -9,57 +9,32 @@
 </div>
 
 <div *ngIf="!loading" class="product-list">
-    <ng-container *ngFor="let category of productsByCategory | keyvalue">
-        <section class="product-list__category">
-
+    <ng-container
+            *ngFor="
+      let category of productsByCategory | keyvalue;
+      let i = index;
+      let isLast = last
+    "
+    >
+        <section
+                class="product-list__category"
+                [ngClass]="{
+        'product-list__category--first': i === 0,
+        'product-list__category--last': isLast
+      }"
+        >
             <div class="product-list__category__header">
         <span class="product-list__category__header-text">
           {{ category.key | titlecase }}
         </span>
             </div>
 
-            <div *ngIf="category.value?.length; else noProducts"
-                 class="product-list__category__list">
-
+            <div
+                    *ngIf="category.value?.length; else noProducts"
+                    class="product-list__category__list"
+            >
                 <ng-container *ngFor="let product of category.value">
-                    <div class="product-list__category__list__card">
-
-                        <div *ngIf="product?.discount"
-                             class="product-list__category__list__card__badge">
-                            {{ product.discount }} OFF
-                        </div>
-
-                        <img
-                                *ngIf="product?.mainImage"
-                                class="product-list__category__list__card__image"
-                                [ngSrc]="product.mainImage"
-                                [alt]="product?.title"
-                                width="200"
-                                height="200"
-                        />
-
-                        <h3 class="product-list__category__list__card__name">
-                            {{ product?.title }}
-                        </h3>
-
-                        <div *ngIf="product?.timer"
-                             class="product-list__category__list__card__timer">
-                            {{ product.timer }}
-                        </div>
-
-                        <ng-container *ngIf="product?.price as price">
-                            <div class="product-list__category__list__card__price">
-                <span *ngIf="price.old"
-                      class="product-list__category__list__card__price-old">
-                  {{ price.old }}
-                </span>
-                                <span class="product-list__category__list__card__price-new">
-                  €{{ price.new }}
-                </span>
-                            </div>
-                        </ng-container>
-
-                    </div>
+                    <app-product-card [product]="product"></app-product-card>
                 </ng-container>
             </div>
 
@@ -68,6 +43,15 @@
                     No products available in this category.
                 </p>
             </ng-template>
+
+            <div class="product-list__category__footer">
+                <a
+                        class="product-list__category__footer__button"
+                        [routerLink]="['/products', category.key]"
+                >
+                    Pogledajte sve proizvode iz {{ category.key | titlecase }}
+                </a>
+            </div>
         </section>
     </ng-container>
 </div>
