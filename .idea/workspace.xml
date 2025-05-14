@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="kit and promo">
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_common.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_common_http.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_common_http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_platform-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_platform-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_router.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/rxjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/rxjs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/index/index.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/product-card/product-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-card/product-card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/product-card/product-card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-card/product-card.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/products/product-card/product-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-card/product-card.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/product-list/product-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/products/products.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/products.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="brandPromo-and-brandSearch" />
+        <entry key="$PROJECT_DIR$" value="kit-promo" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,7 +52,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#4 on kit-promo",
+    "git-widget-placeholder": "#2 on products",
     "last_opened_file_path": "/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -125,7 +116,7 @@
       <workItem from="1747041250432" duration="6113000" />
       <workItem from="1747119946087" duration="9194000" />
       <workItem from="1747145506415" duration="10606000" />
-      <workItem from="1747229899563" duration="1612000" />
+      <workItem from="1747229899563" duration="1932000" />
     </task>
     <task id="LOCAL-00001" summary="--init commit">
       <option name="closed" value="true" />

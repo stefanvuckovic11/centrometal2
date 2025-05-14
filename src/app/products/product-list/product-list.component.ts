@@ -8,6 +8,7 @@ import { ProductsByCategory } from '../../interfaces/product';
   styleUrls: ['./product-list.component.scss'],
   standalone: false
 })
+
 export class ProductListComponent implements OnInit {
   productsByCategory: ProductsByCategory = {};
   loading = true;

@@ -15,6 +15,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
     SharedModule,
     ProductsRoutingModule
   ],
+
   exports: [
     ProductListComponent,
     ProductCardComponent
