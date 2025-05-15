@@ -8,51 +8,66 @@
     />
 </div>
 
-
-<div *ngIf="!loading" class="product-list">
-    <ng-container
-            *ngFor="
-      let category of productsByCategory | keyvalue;
-      let i = index;
-      let isLast = last
-    "
-    >
-        <section
-                class="product-list__category"
-                [ngClass]="{
-        'product-list__category--first': i === 0,
-        'product-list__category--last': isLast
-      }"
-        >
-            <div class="product-list__category__header">
-        <span class="product-list__category__header-text">
-          {{ category.key | titlecase }}
-        </span>
-            </div>
-
-            <div
-                    *ngIf="category.value?.length; else noProducts"
-                    class="product-list__category__list"
+<ng-container *ngIf="!loading">
+    <ng-container *ngIf="productsByCategory && (productsByCategory | keyvalue).length; else noCategories">
+        <div class="product-list">
+            <ng-container
+                    *ngFor="
+          let category of productsByCategory | keyvalue;
+          let i = index;
+          let isLast = last
+        "
             >
-                <ng-container *ngFor="let product of category.value">
-                    <app-product-card [product]="product"></app-product-card>
-                </ng-container>
-            </div>
-
-            <ng-template #noProducts>
-                <p class="product-list__category__empty">
-                    No products available in this category.
-                </p>
-            </ng-template>
-
-            <div class="product-list__category__footer">
-                <a
-                        class="product-list__category__footer__button"
-                        [routerLink]="['/products', category.key]"
+                <section
+                        class="product-list__category"
+                        [ngClass]="{
+            'product-list__category--first': i === 0,
+            'product-list__category--last': isLast
+          }"
                 >
-                    Pogledajte sve proizvode iz {{ category.key | titlecase }}
-                </a>
-            </div>
-        </section>
+                    <div class="product-list__category__header">
+            <span class="product-list__category__header-text">
+              {{ category.key | titlecase }}
+            </span>
+                    </div>
+
+                    <div
+                            *ngIf="category.value?.length; else noProducts"
+                            class="product-list__category__list"
+                    >
+                        <ng-container
+                                *ngFor="
+                let product of i === 1
+                  ? category.value.slice(0, 8)
+                  : category.value
+              "
+                        >
+                            <app-product-card [product]="product"></app-product-card>
+                        </ng-container>
+                    </div>
+
+                    <ng-template #noProducts>
+                        <p class="product-list__category__empty">
+                            No products available in this category.
+                        </p>
+                    </ng-template>
+
+                    <div class="product-list__category__footer">
+                        <a
+                                class="product-list__category__footer__button"
+                                [routerLink]="['/products', category.key]"
+                        >
+                            Pogledajte sve proizvode iz {{ category.key | titlecase }}
+                        </a>
+                    </div>
+                </section>
+            </ng-container>
+        </div>
     </ng-container>
-</div>
+
+    <ng-template #noCategories>
+        <p class="product-list__empty-all">
+            Trenutno nema dostupnih proizvoda.
+        </p>
+    </ng-template>
+</ng-container>

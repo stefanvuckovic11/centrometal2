@@ -14,6 +14,7 @@ export interface Product {
     price: Price;
 
 }
+
 export interface ProductsByCategory {
     [category: string]: Product[];
 }

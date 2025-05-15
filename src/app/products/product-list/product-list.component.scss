@@ -18,7 +18,8 @@
   &__category {
     margin-bottom: 2rem;
 
-    &--first &__header {
+    &--first,
+    &__header {
       border-bottom-color: $navbar-dark-blue;
     }
 
