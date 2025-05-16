@@ -9,15 +9,9 @@
 </div>
 
 <ng-container *ngIf="!loading">
-    <ng-container *ngIf="productsByCategory && (productsByCategory | keyvalue).length; else noCategories">
+    <ng-container *ngIf="productsByCategory && sections?.length; else noCategories">
         <div class="product-list">
-            <ng-container
-                    *ngFor="
-          let category of productsByCategory | keyvalue;
-          let i = index;
-          let isLast = last
-        "
-            >
+            <ng-container *ngFor="let section of sections; let i = index; let isLast = last">
                 <section
                         class="product-list__category"
                         [ngClass]="{
@@ -27,37 +21,34 @@
                 >
                     <div class="product-list__category__header">
             <span class="product-list__category__header-text">
-              {{ category.key | titlecase }}
+              <i [class]="section.iconClass" aria-hidden="true"></i> {{ section.headerText }}
             </span>
                     </div>
 
-                    <div
-                            *ngIf="category.value?.length; else noProducts"
-                            class="product-list__category__list"
-                    >
-                        <ng-container
-                                *ngFor="
-                let product of i === 1
-                  ? category.value.slice(0, 8)
-                  : category.value
-              "
-                        >
-                            <app-product-card [product]="product"></app-product-card>
-                        </ng-container>
-                    </div>
+                    <ng-container *ngIf="productsByCategory[section.key]?.length; else noProducts">
+                        <div class="product-list__category__list">
+                            <ng-container
+                                    *ngFor="let product of section.key === ProductCategory.HotOffer
+                  ? productsByCategory[section.key].slice(0, 8)
+                  : productsByCategory[section.key].slice(0, 4)"
+                            >
+                                <app-product-card [product]="product"></app-product-card>
+                            </ng-container>
+                        </div>
+                    </ng-container>
 
                     <ng-template #noProducts>
                         <p class="product-list__category__empty">
-                            No products available in this category.
+                            Nema dostupnih proizvoda u ovoj kategoriji.
                         </p>
                     </ng-template>
 
                     <div class="product-list__category__footer">
                         <a
                                 class="product-list__category__footer__button"
-                                [routerLink]="['/products', category.key]"
+                                [routerLink]="['/products', section.key]"
                         >
-                            Pogledajte sve proizvode iz {{ category.key | titlecase }}
+                            {{ section.footerButtonText }}
                         </a>
                     </div>
                 </section>
@@ -66,8 +57,6 @@
     </ng-container>
 
     <ng-template #noCategories>
-        <p class="product-list__empty-all">
-            Trenutno nema dostupnih proizvoda.
-        </p>
+        <p class="product-list__empty-all">Trenutno nema dostupnih proizvoda.</p>
     </ng-template>
 </ng-container>

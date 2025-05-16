@@ -6,10 +6,9 @@
   text-align: center;
   padding: 1rem;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   border-radius: 0.25rem;
   box-sizing: border-box;
-
 
   &__badge {
     position: absolute;
@@ -65,12 +64,12 @@
     font-size: 1rem;
     font-weight: bold;
 
-    &-old {
+    &--old {
       color: #999;
       text-decoration: line-through;
     }
 
-    &-new {
+    &--new {
       color: rgb(1, 173, 239);
     }
   }

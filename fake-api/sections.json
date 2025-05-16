@@ -1,0 +1,32 @@
+[
+  {
+    "key": "hotOffer",
+    "headerText": "Vruća ponuda",
+    "iconClass": "fa fa-fire",
+    "footerButtonText": "Pogledajte sve proizvode iz vruće ponude"
+  },
+  {
+    "key": "action",
+    "headerText": "Akcija",
+    "iconClass": "fa fa-tag",
+    "footerButtonText": "Pogledajte sve proizvode iz akcije"
+  },
+  {
+    "key": "recommended",
+    "headerText": "Preporučeno",
+    "iconClass": "fa fa-star",
+    "footerButtonText": "Pogledajte sve proizvode iz preporučenih"
+  },
+  {
+    "key": "new",
+    "headerText": "Novo u ponudi",
+    "iconClass": "fa fa-heart",
+    "footerButtonText": "Pogledajte sve proizvode iz noviteta"
+  },
+  {
+    "key": "sale",
+    "headerText": "Rasprodaja",
+    "iconClass": "fa fa-percent",
+    "footerButtonText": "Pogledajte sve proizvode iz rasprodaje"
+  }
+]

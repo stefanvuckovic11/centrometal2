@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../products.service';
-import { ProductsByCategory } from '../../interfaces/product';
+import { ProductsByCategory, ProductCategory } from '../../interfaces/product';
+import { Section } from './section';
+import { SectionService } from './section.service';
 
 @Component({
   selector: 'app-product-list',
@@ -8,24 +10,36 @@ import { ProductsByCategory } from '../../interfaces/product';
   styleUrls: ['./product-list.component.scss'],
   standalone: false
 })
-
 export class ProductListComponent implements OnInit {
   productsByCategory: ProductsByCategory = {};
+  sections: Section[] = [];
   loading = true;
 
-  constructor(private productService: ProductService) {}
+  ProductCategory = ProductCategory;
+
+  constructor(
+      private productService: ProductService,
+      private sectionService: SectionService
+  ) {}
 
   ngOnInit(): void {
-    this.fetchProductsByCategory();
+    this.fetchProducts();
+    this.fetchSections();
   }
 
-  private fetchProductsByCategory(): void {
+  private fetchProducts(): void {
     this.productService.getProducts().subscribe(products => {
       this.productsByCategory = products.reduce<ProductsByCategory>((acc, p) => {
         (acc[p.category] = acc[p.category] || []).push(p);
         return acc;
       }, {});
       this.loading = false;
+    });
+  }
+
+  private fetchSections(): void {
+    this.sectionService.getSections().subscribe(sections => {
+      this.sections = sections;
     });
   }
 }

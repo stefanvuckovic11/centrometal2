@@ -2,20 +2,34 @@
   {
     "title": "BIJELA TEHNIKA",
     "children": [
-      "Veš mašine",
-      "Sušilice",
-      "Frižideri",
-      "Štednjaci",
-      "Zamrzivači"
+      { "title": "Veš mašine" },
+      { "title": "Sušilice" },
+      {
+        "title": "Frižideri",
+        "children": [
+          { "title": "Kombinovani" },
+          { "title": "Samostojeći" },
+          { "title": "Ugradni" }
+        ]
+      },
+      { "title": "Štednjaci" },
+      { "title": "Zamrzivači" }
     ]
   },
   {
     "title": "UGRADNA TEHNIKA",
     "children": [
-      "Ugradbene rerne",
-      "Ugradbene ploče",
-      "Mašine za suđe",
-      "Aspiratori"
+      { "title": "Ugradbene rerne" },
+      {
+        "title": "Ugradbene ploče",
+        "children": [
+          { "title": "Staklokeramičke" },
+          { "title": "Indukcione" },
+          { "title": "Plinske" }
+        ]
+      },
+      { "title": "Mašine za suđe" },
+      { "title": "Aspiratori" }
     ]
   },
   {
@@ -25,34 +39,53 @@
   {
     "title": "MALI KUĆNI APARATI",
     "children": [
-      "Mikseri",
-      "Tosteri",
-      "Aparati za kafu",
-      "Usisivači"
+      {
+        "title": "Mikseri",
+        "children": [
+          { "title": "Ručni" },
+          { "title": "Stoni" }
+        ]
+      },
+      { "title": "Tosteri" },
+      { "title": "Aparati za kafu" },
+      { "title": "Usisivači" }
     ]
   },
   {
     "title": "TV I VIDEO",
     "children": [
-      "LED televizori",
-      "Smart TV",
-      "Projektori"
+      {
+        "title": "LED televizori",
+        "children": [
+          { "title": "32 inča" },
+          { "title": "40 inča" },
+          { "title": "50+ inča" }
+        ]
+      },
+      { "title": "Smart TV" },
+      { "title": "Projektori" }
     ]
   },
   {
     "title": "AUDIO",
     "children": [
-      "Zvučnici",
-      "Slušalice",
-      "Radio uređaji"
+      { "title": "Zvučnici" },
+      { "title": "Slušalice" },
+      { "title": "Radio uređaji" }
     ]
   },
   {
     "title": "TELEFONIJA",
     "children": [
-      "Mobilni telefoni",
-      "Fiksni telefoni",
-      "Dodaci za telefone"
+      {
+        "title": "Mobilni telefoni",
+        "children": [
+          { "title": "Android" },
+          { "title": "iPhone" }
+        ]
+      },
+      { "title": "Fiksni telefoni" },
+      { "title": "Dodaci za telefone" }
     ]
   },
   {

@@ -10,7 +10,8 @@
             [alt]="product?.title"
             width="200"
             height="200"
-            >
+    />
+
     <h3 class="product-card__name">{{ product?.title }}</h3>
 
     <div *ngIf="product?.timer" class="product-card__timer">
@@ -19,8 +20,9 @@
 
     <ng-container *ngIf="product?.price as price">
         <div class="product-card__price">
-            <span *ngIf="price.old" class="product-card__price-old">{{ price.old }}</span>
-            <span class="product-card__price-new">€{{ price.new }}</span>
+            <span *ngIf="price.old" class="product-card__price--old">€{{ price.old }}</span>
+            <span class="product-card__price--new">€{{ price.new }}</span>
         </div>
+
     </ng-container>
 </div>

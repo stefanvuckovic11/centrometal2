@@ -6,7 +6,7 @@ import { AccordionService } from './accordion.service';
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss'],
-  standalone:false
+  standalone: false
 })
 export class AccordionComponent implements OnInit {
   items: AccordionItem[] = [];
@@ -14,12 +14,14 @@ export class AccordionComponent implements OnInit {
   constructor(private accordionService: AccordionService) {}
 
   ngOnInit(): void {
-    this.accordionService.getItems()
-        .subscribe(data => this.items = data);
+    this.accordionService.getItems().subscribe(data => {
+      this.items = data;
+    });
   }
 
-  toggle(i: number): void {
-    if (!this.items[i].children) { return; }
-    this.items[i].expanded = !this.items[i].expanded;
+  toggle(item: AccordionItem): void {
+    if (item.children && item.children.length > 0) {
+      item.expanded = !item.expanded;
+    }
   }
 }

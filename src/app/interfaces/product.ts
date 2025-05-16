@@ -1,3 +1,11 @@
+export enum ProductCategory {
+    HotOffer = 'hotOffer',
+    Action = 'action',
+    Recommended = 'recommended',
+    New = 'new',
+    Sale = 'sale'
+}
+
 export interface Price {
     old: string;
     new: string;
@@ -5,14 +13,13 @@ export interface Price {
 
 export interface Product {
     id: string;
-    category: 'hotOffer' | 'action' | 'recommended' | 'new' | 'sale';
+    category: ProductCategory;
     discount?: string;
     mainImage: string;
     title: string;
     description: string;
     timer?: string;
     price: Price;
-
 }
 
 export interface ProductsByCategory {
