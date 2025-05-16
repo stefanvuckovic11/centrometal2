@@ -7,6 +7,8 @@ import {
   Renderer2,
   HostListener
 } from '@angular/core';
+import { FooterService } from './footer.service';
+import { FooterBrand, FooterColumn } from './footer';
 
 @Component({
   selector: 'app-footer',
@@ -23,65 +25,21 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   slideWidth = 0;
   autoSlideInterval: any = null;
 
-  brands = [
-    { name: 'Sony', img: '/images/sony.png' },
-    { name: 'Panasonic', img: '/images/panasonic.png' },
-    { name: 'Gorenje', img: '/images/gorenje.png' },
-    { name: 'Samsung', img: '/images/samsung.png' },
-    { name: 'Indesit', img: '/images/indesit.png' }
-  ];
+  brands: FooterBrand[] = [];
+  linkColumns: FooterColumn[] = [];
 
-  linkColumns = [
-    {
-      title: 'Informacije',
-      links: [
-        { label: 'O nama', url: '/about' },
-        { label: 'Gdje kupiti', url: '/where-to-buy' },
-        { label: 'Zapošljavanje', url: '/careers' },
-        { label: 'Aktivnosti', url: '/activities' }
-      ]
-    },
-    {
-      title: 'Aktivnosti',
-      links: [
-        { label: 'Akcije', url: '/action' },
-        { label: 'Noviteti', url: '/news' },
-        { label: 'Rasprodaja', url: '/sale' },
-        { label: 'Marketing', url: '/marketing' }
-      ]
-    },
-    {
-      title: 'Moja strana',
-      links: [
-        { label: 'Registracija', url: '/register' },
-        { label: 'Prijava', url: '/login' },
-        { label: 'Korisnička strana', url: '/account' },
-        { label: 'Korpa', url: '/cart' }
-      ]
-    },
-    {
-      title: 'Plaćanje i dostava',
-      links: [
-        { label: 'Načini plaćanja', url: '/payment-methods' },
-        { label: 'Sigurnost plaćanja', url: '/payment-security' },
-        { label: 'Brza i pouzdana dostava', url: '/delivery' },
-        { label: 'Odaberite datum dostave', url: '/delivery-date' }
-      ]
-    },
-    {
-      title: 'Povrat i zamjena',
-      links: [
-        { label: 'Servis', url: '/service' },
-        { label: 'Reklamacije', url: '/complaints' }
-      ]
-    }
-  ];
-
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private footerService: FooterService) {}
 
   ngAfterViewInit(): void {
     this.slideWidth = this.inner.nativeElement.offsetWidth * 0.2;
     this.updateMediaBehavior();
+  }
+
+  ngOnInit(): void {
+    this.footerService.getFooterData().subscribe(data => {
+      this.brands = data.brands;
+      this.linkColumns = data.linkColumns;
+    });
   }
 
   ngOnDestroy(): void {

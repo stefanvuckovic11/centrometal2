@@ -7,7 +7,7 @@ import {
   Renderer2
 } from '@angular/core';
 
-import { Slide } from '../../../interfaces/slide';
+import { Slide } from './slide';
 
 @Component({
   selector: 'app-slider',

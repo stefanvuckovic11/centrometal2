@@ -1,0 +1,82 @@
+[
+  {
+    "title": "BIJELA TEHNIKA",
+    "children": [
+      "Veš mašine",
+      "Sušilice",
+      "Frižideri",
+      "Štednjaci",
+      "Zamrzivači"
+    ]
+  },
+  {
+    "title": "UGRADNA TEHNIKA",
+    "children": [
+      "Ugradbene rerne",
+      "Ugradbene ploče",
+      "Mašine za suđe",
+      "Aspiratori"
+    ]
+  },
+  {
+    "title": "KLIMATIZACIJA I GRIJANJE",
+    "link": "/climate"
+  },
+  {
+    "title": "MALI KUĆNI APARATI",
+    "children": [
+      "Mikseri",
+      "Tosteri",
+      "Aparati za kafu",
+      "Usisivači"
+    ]
+  },
+  {
+    "title": "TV I VIDEO",
+    "children": [
+      "LED televizori",
+      "Smart TV",
+      "Projektori"
+    ]
+  },
+  {
+    "title": "AUDIO",
+    "children": [
+      "Zvučnici",
+      "Slušalice",
+      "Radio uređaji"
+    ]
+  },
+  {
+    "title": "TELEFONIJA",
+    "children": [
+      "Mobilni telefoni",
+      "Fiksni telefoni",
+      "Dodaci za telefone"
+    ]
+  },
+  {
+    "title": "KAMERE I FOTO APARATI",
+    "link": "/cameras"
+  },
+  {
+    "title": "AUTO TEHNIKA",
+    "link": "/auto"
+  },
+  {
+    "title": "RAČUNARI I PERIFERIJE",
+    "link": "/computers"
+  },
+  {
+    "title": "KONZOLE I IGRICE",
+    "link": "/gaming"
+  },
+  {
+    "title": "POSTELJINE",
+    "link": "/linen"
+  },
+  {
+    "title": "KUPOVINA PREKO T-COMA",
+    "link": "/t-com"
+  }
+]

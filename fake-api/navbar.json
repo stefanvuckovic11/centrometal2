@@ -1,0 +1,12 @@
+[
+  { "title": "Početna",      "icon": "fa-home",     "link": "/"         },
+  { "title": "Akcija",       "link": "/action"      },
+  { "title": "Rasprodaja",   "link": "/sale"        },
+  { "title": "Katalozi",     "link": "/catalogs"    },
+  { "title": "Novosti",      "link": "/news"        },
+  { "title": "O nama",       "link": "/about"       },
+  { "title": "Uradi sam",    "link": "/diy"         },
+  { "title": "Vip kartica",  "link": "/vip-card"    },
+  { "title": "Kontakt",      "link": "/contact"     },
+  { "title": "Informacije",  "link": "/info"        }
+]
