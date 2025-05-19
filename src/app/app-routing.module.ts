@@ -5,23 +5,32 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./home/home.module').then(m => m.HomeModule)
+        import('./pages/home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'auth',
     loadChildren: () =>
-      import('./auth/auth.module').then(m => m.AuthModule)
+        import('./pages/auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'products',
     loadChildren: () =>
-      import('./products/products.module').then(m => m.ProductsModule)
+        import('./products/products.module').then(m => m.ProductsModule)
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  {
+    path: 'see-all/:category',
+    loadComponent: () =>
+        import('./pages/see-all/see-all.component').then(m => m.SeeAllComponent)
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

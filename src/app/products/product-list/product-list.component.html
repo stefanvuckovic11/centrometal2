@@ -46,11 +46,13 @@
                     <div class="product-list__category__footer">
                         <a
                                 class="product-list__category__footer__button"
-                                [routerLink]="['/products', section.key]"
+                                [routerLink]="['/see-all', section.key]"
+                                target="_blank"
                         >
                             {{ section.footerButtonText }}
                         </a>
                     </div>
+
                 </section>
             </ng-container>
         </div>

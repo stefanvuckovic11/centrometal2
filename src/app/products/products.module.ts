@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductCardComponent } from '../global/product-card/product-card.component';
+import {SeeAllComponent} from "../pages/see-all/see-all.component";
 
 @NgModule({
   declarations: [
     ProductListComponent,
-    ProductCardComponent
+    ProductCardComponent,
+      SeeAllComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
 
   exports: [
     ProductListComponent,
-    ProductCardComponent
+    ProductCardComponent,
+      SeeAllComponent
   ]
 })
 export class ProductsModule {}

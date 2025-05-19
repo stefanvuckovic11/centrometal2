@@ -7,7 +7,7 @@ import { IndexComponent }       from './index/index.component';
 import { AccordionComponent }   from './index/accordion/accordion.component';
 import { SliderComponent }      from './index/slider/slider.component';
 
-import { ProductsModule }       from '../products/products.module';
+import { ProductsModule }       from '../../products/products.module';
 import { BrandPromoComponent } from './brand-promo/brand-promo.component';
 import { BrandSearchComponent } from './brand-search/brand-search.component';
 import {FormsModule} from "@angular/forms";
