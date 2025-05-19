@@ -1,6 +1,29 @@
 <div class="see-all">
-    <h1>Proizvodi iz kategorije: {{ category }}</h1>
-    <div class="see-all__grid">
-        <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+    <h1 class="see-all__title">Proizvodi iz kategorije: {{ category }}</h1>
+
+    <div *ngIf="loading" class="product-list__loader">
+        <img
+                class="product-list__loader__image"
+                ngSrc="/images/spinner.gif"
+                alt="Loading…"
+                width="193"
+                height="192"
+        />
     </div>
+
+    <ng-container *ngIf="!loading">
+        <div class="see-all__grid">
+            <ng-container *ngIf="products?.length; else noProducts">
+                <ng-container *ngFor="let product of products">
+                    <app-product-card [product]="product"></app-product-card>
+                </ng-container>
+            </ng-container>
+
+            <ng-template #noProducts>
+                <p class="see-all__empty">
+                    Trenutno nema dostupnih proizvoda u ovoj kategoriji.
+                </p>
+            </ng-template>
+        </div>
+    </ng-container>
 </div>

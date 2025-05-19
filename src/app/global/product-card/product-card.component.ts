@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-
+import { Product } from '../../interfaces/product';
 
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.scss'],
-  standalone:false
+  standalone: false
 })
 export class ProductCardComponent {
-  @Input() product: any;
+  @Input() product!: Product;
 }

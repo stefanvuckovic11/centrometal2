@@ -7,6 +7,7 @@ import { AppComponent }          from './app.component';
 import { SharedModule }          from './shared/shared.module';
 import { AuthModule }            from './pages/auth/auth.module';
 import { ProductsModule }        from './products/products.module';
+import {SeeAllModule} from "./pages/see-all/see-all.module";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProductsModule }        from './products/products.module';
     AppRoutingModule,
     SharedModule,
     AuthModule,
-    ProductsModule
+    ProductsModule,
+      SeeAllModule,
   ],
   providers: [
     provideHttpClient()

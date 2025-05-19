@@ -1,0 +1,13 @@
+.see-all__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.see-all__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: center;
+}

@@ -18,10 +18,11 @@ const routes: Routes = [
         import('./products/products.module').then(m => m.ProductsModule)
   },
   {
-    path: 'see-all/:category',
-    loadComponent: () =>
-        import('./pages/see-all/see-all.component').then(m => m.SeeAllComponent)
-  },
+    path: 'see-all',
+    loadChildren: () => import('./pages/see-all/see-all.module').then(m => m.SeeAllModule)
+  }
+  ,
+
   {
     path: '**',
     redirectTo: '',

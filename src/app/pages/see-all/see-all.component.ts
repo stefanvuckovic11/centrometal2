@@ -3,13 +3,13 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../products/products.service';
 import { Product } from '../../interfaces/product';
 
-
 @Component({
   selector: 'app-see-all',
   templateUrl: './see-all.component.html',
   styleUrls: ['./see-all.component.scss'],
   standalone:false
 })
+
 export class SeeAllComponent implements OnInit {
   category: string = '';
   products: Product[] = [];
