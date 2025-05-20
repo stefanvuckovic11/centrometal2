@@ -19,10 +19,9 @@ const routes: Routes = [
   },
   {
     path: 'see-all',
-    loadChildren: () => import('./pages/see-all/see-all.module').then(m => m.SeeAllModule)
-  }
-  ,
-
+    loadChildren: () =>
+        import('./pages/see-all/see-all.module').then(m => m.SeeAllModule)
+  },
   {
     path: '**',
     redirectTo: '',

@@ -9,7 +9,11 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   border-radius: 0.25rem;
   box-sizing: border-box;
-
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
   &__badge {
     position: absolute;
     top: 0.5rem;
