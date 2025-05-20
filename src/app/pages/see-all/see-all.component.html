@@ -3,8 +3,6 @@
         <app-accordion></app-accordion>
         <app-brand-search></app-brand-search>
         <app-kit-promo></app-kit-promo>
-        <app-kit-promo></app-kit-promo>
-
     </div>
 
     <div class="see-all__right">
@@ -13,17 +11,16 @@
         {{ headerText }}
       </span>
         </div>
-
+        <app-filter-bar (filterChanged)="onFilterChange($event)"></app-filter-bar>
         <div class="see-all__grid">
             <ng-container *ngIf="loading">
-                <ng-container *ngFor="let _ of (products.length > 0 ? products : [].constructor(12))">
+                <ng-container *ngFor="let _ of skeletonArray">
                     <div class="see-all__grid__skeleton-card"></div>
                 </ng-container>
             </ng-container>
-
             <ng-container *ngIf="!loading">
-                <ng-container *ngIf="products?.length; else noProducts">
-                    <ng-container *ngFor="let product of products">
+                <ng-container *ngIf="displayedProducts.length; else noProducts">
+                    <ng-container *ngFor="let product of displayedProducts">
                         <app-product-card [product]="product"></app-product-card>
                     </ng-container>
                 </ng-container>

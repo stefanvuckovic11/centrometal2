@@ -1,0 +1,33 @@
+<div class="filter-bar">
+    <div class="filter-bar__sort">
+        <label for="sortType" class="filter-bar__label">Sortiraj po</label>
+        <select id="sortType"
+                class="filter-bar__select"
+                [(ngModel)]="sortType">
+            <option value="">Bez sortiranja</option>
+            <option value="priceAsc">Cijena: Niska do Visoke</option>
+            <option value="priceDesc">Cijena: Visoka do Niske</option>
+            <option value="nameAsc">Abecedni red: A do Z</option>
+            <option value="nameDesc">Abecedni red: Z do A</option>
+        </select>
+    </div>
+
+    <div class="filter-bar__price">
+        <label for="minPrice" class="filter-bar__label">Min Cijena</label>
+        <input type="number"
+               id="minPrice"
+               class="filter-bar__input"
+               [(ngModel)]="minPrice" />
+
+        <label for="maxPrice" class="filter-bar__label">Max Cijena</label>
+        <input type="number"
+               id="maxPrice"
+               class="filter-bar__input"
+               [(ngModel)]="maxPrice" />
+    </div>
+
+    <button (click)="applyFilters()"
+            class="filter-bar__button">
+        Apply
+    </button>
+</div>

@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="see all page">
+      <change afterPath="$PROJECT_DIR$/src/app/pages/see-all/filter-bar/filter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/index/index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/index/index.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/index/index.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.module.ts" afterDir="false" />
     </list>
@@ -23,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="see-all-route" />
+        <entry key="$PROJECT_DIR$" value="see-all-page" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,22 +48,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;see-all-page&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/synergysuite/WebstormProjects/centrometal2/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "see-all-filter",
+    "last_opened_file_path": "/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "ts.external.directory.path": "/Users/synergysuite/WebstormProjects/centrometal2/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/centrometal/public" />
@@ -125,7 +123,7 @@
       <workItem from="1747229899563" duration="2008000" />
       <workItem from="1747295102710" duration="12458000" />
       <workItem from="1747641272617" duration="10547000" />
-      <workItem from="1747725402452" duration="6161000" />
+      <workItem from="1747725402452" duration="8653000" />
     </task>
     <task id="LOCAL-00001" summary="--init commit">
       <option name="closed" value="true" />
@@ -303,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747666352746</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="see all page">
+      <option name="closed" value="true" />
+      <created>1747733392174</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1747733392174</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
