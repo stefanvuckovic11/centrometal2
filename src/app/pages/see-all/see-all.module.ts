@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { SeeAllComponent } from './see-all.component';
 import { SeeAllRoutingModule } from './see-all.routing.module';
 import { SharedModule } from '../../shared/shared.module';
+import {HomeModule} from "../home/home.module";
 
 @NgModule({
     declarations: [SeeAllComponent],
-    imports: [CommonModule, SeeAllRoutingModule, SharedModule]
+    imports: [CommonModule, SeeAllRoutingModule, SharedModule, HomeModule]
 })
 export class SeeAllModule {}

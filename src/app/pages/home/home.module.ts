@@ -15,21 +15,26 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 import { KitPromoComponent } from './kit-promo/kit-promo.component';
 
 @NgModule({
-  declarations: [
-    IndexComponent,
-    AccordionComponent,
-    SliderComponent,
-    BrandPromoComponent,
-    BrandSearchComponent,
-    NewsletterComponent,
-    KitPromoComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    HomeRoutingModule,
-    ProductsModule,
-    FormsModule
-  ]
+    declarations: [
+        IndexComponent,
+        AccordionComponent,
+        SliderComponent,
+        BrandPromoComponent,
+        BrandSearchComponent,
+        NewsletterComponent,
+        KitPromoComponent
+    ],
+    exports: [
+        AccordionComponent,
+        BrandSearchComponent,
+        KitPromoComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        HomeRoutingModule,
+        ProductsModule,
+        FormsModule
+    ]
 })
 export class HomeModule {}

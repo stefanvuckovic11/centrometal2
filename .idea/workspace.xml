@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="routing to see-all page and reorganization of project structure">
-      <change afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.routing.module.ts" afterDir="false" />
+    <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="see all page">
       <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_platform-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_platform-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/@angular_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/global/product-card/product-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/global/product-card/product-card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/index/index.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/index/index.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/index/index.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/products/products.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/products.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/shared.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,22 +50,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "see-all-page",
-    "last_opened_file_path": "/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
-    "ts.external.directory.path": "/Users/synergysuite/WebstormProjects/centrometal2/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;see-all-page&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/synergysuite/WebstormProjects/centrometal2/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/centrometal/public" />
@@ -130,7 +124,8 @@
       <workItem from="1747145506415" duration="10606000" />
       <workItem from="1747229899563" duration="2008000" />
       <workItem from="1747295102710" duration="12458000" />
-      <workItem from="1747641272617" duration="10362000" />
+      <workItem from="1747641272617" duration="10547000" />
+      <workItem from="1747725402452" duration="6161000" />
     </task>
     <task id="LOCAL-00001" summary="--init commit">
       <option name="closed" value="true" />
@@ -300,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747651889761</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="see all page">
+      <option name="closed" value="true" />
+      <created>1747666352746</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1747666352746</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +328,7 @@
     <MESSAGE value="product changes" />
     <MESSAGE value="overall changes" />
     <MESSAGE value="routing to see-all page and reorganization of project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="routing to see-all page and reorganization of project structure" />
+    <MESSAGE value="see all page" />
+    <option name="LAST_COMMIT_MESSAGE" value="see all page" />
   </component>
 </project>
