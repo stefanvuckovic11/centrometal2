@@ -12,6 +12,7 @@ export interface Price {
 }
 
 export interface Product {
+    name: string;
     id: string;
     category: ProductCategory;
     discount?: string;

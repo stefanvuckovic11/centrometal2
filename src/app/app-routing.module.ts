@@ -26,6 +26,12 @@ const routes: Routes = [
     path: '**',
     redirectTo: '',
     pathMatch: 'full'
+  },
+  {
+    path: 'product/:id',
+    loadChildren: () =>
+        import('./pages/open-product/open-product.module')
+            .then(m => m.OpenProductModule)
   }
 ];
 
