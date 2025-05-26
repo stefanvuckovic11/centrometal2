@@ -1,5 +1,5 @@
 import { NgModule }          from '@angular/core';
-import { CommonModule }      from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { RouterModule }      from '@angular/router';
 
 import { OpenProductComponent }          from './open-product.component';
@@ -12,7 +12,8 @@ import { OpenProductBreadcrumbComponent } from './open-product-breadcrumb/open-p
     ],
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
+        NgOptimizedImage
     ],
     exports: [
         OpenProductComponent

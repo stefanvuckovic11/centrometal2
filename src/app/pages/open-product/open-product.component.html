@@ -1,1 +1,45 @@
-    <app-open-product-breadcrumb [product]="product"></app-open-product-breadcrumb>
+<div class="product-detail">
+    <div class="product-detail__body">
+        <app-open-product-breadcrumb
+                class="product-detail__breadcrumb"
+                [product]="product">
+        </app-open-product-breadcrumb>
+        <div id="gallerySkeleton" class="product-detail__gallery">
+            <app-gallery-skeleton></app-gallery-skeleton>
+        </div>
+        <div id="realGalleryContainer" class="product-detail__gallery" [hidden]="!product">
+            <app-product-gallery [images]="product.images"></app-product-gallery>
+        </div>
+
+        <div class="product-detail__content">
+            <app-product-info
+                    class="product-detail__info"
+                    [product]="product">
+            </app-product-info>
+
+            <app-product-additional
+                    class="product-detail__additional"
+                    [details]="product.details">
+            </app-product-additional>
+
+            <app-product-similar
+                    class="product-detail__similar-products"
+                    [category]="product.category">
+            </app-product-similar>
+        </div>
+    </div>
+
+    <aside class="product-detail__sidebar">
+        <app-sidebar-video1 class="product-detail__video-box"></app-sidebar-video1>
+        <app-sidebar-video2 class="product-detail__video-box"></app-sidebar-video2>
+        <app-sidebar-news class="product-detail__news"></app-sidebar-news>
+    </aside>
+
+    <div class="product-detail__modal" id="imageModal">
+        <button class="product-detail__modal__close">&times;</button>
+        <img
+                class="product-detail__modal__image"
+                ngSrc="selectedImage"
+                alt="Full Screen Image">
+    </div>
+</div>
