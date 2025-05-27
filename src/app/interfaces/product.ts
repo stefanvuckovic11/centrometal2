@@ -12,6 +12,7 @@ export interface Price {
 }
 
 export interface Product {
+    images: string[];
     name: string;
     id: string;
     category: ProductCategory;

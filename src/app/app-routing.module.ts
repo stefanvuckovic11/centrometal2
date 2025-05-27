@@ -23,15 +23,15 @@ const routes: Routes = [
         import('./pages/see-all/see-all.module').then(m => m.SeeAllModule)
   },
   {
-    path: '**',
-    redirectTo: '',
-    pathMatch: 'full'
-  },
-  {
     path: 'product/:id',
     loadChildren: () =>
         import('./pages/open-product/open-product.module')
             .then(m => m.OpenProductModule)
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 

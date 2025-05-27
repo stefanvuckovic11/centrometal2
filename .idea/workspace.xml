@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="see all page">
-      <change afterPath="$PROJECT_DIR$/src/app/pages/see-all/filter-bar/filter.ts" afterDir="false" />
+    <list default="true" id="4a8b9906-cff8-4ef3-9b90-1ed398c2d713" name="Changes" comment="project structure">
       <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/.tsbuildinfo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/rxjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.2.9/centrometal/vite/deps/rxjs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/see-all/see-all.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/see-all/see-all.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/interfaces/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interfaces/product.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/open-product/open-product-breadcrumb/open-product-breadcrumb.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/open-product/open-product-breadcrumb/open-product-breadcrumb.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/open-product/open-product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/open-product/open-product.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/open-product/open-product.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/open-product/open-product.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/open-product/open-product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/open-product/open-product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/open-product/open-product.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/open-product/open-product.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="see-all-page" />
+        <entry key="$PROJECT_DIR$" value="open-product-general-structure" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,13 +57,14 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "see-all-filter",
+    "git-widget-placeholder": "open-product-galleryslider",
     "last_opened_file_path": "/Users/synergysuite/WebstormProjects/centrometal2/centrometal/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.Angular CLI Server.executor": "Run",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
     "ts.external.directory.path": "/Users/synergysuite/WebstormProjects/centrometal2/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -123,7 +129,10 @@
       <workItem from="1747229899563" duration="2008000" />
       <workItem from="1747295102710" duration="12458000" />
       <workItem from="1747641272617" duration="10547000" />
-      <workItem from="1747725402452" duration="8653000" />
+      <workItem from="1747725402452" duration="12206000" />
+      <workItem from="1747818988737" duration="6000" />
+      <workItem from="1748243657975" duration="16144000" />
+      <workItem from="1748329372822" duration="8208000" />
     </task>
     <task id="LOCAL-00001" summary="--init commit">
       <option name="closed" value="true" />
@@ -309,7 +318,39 @@
       <option name="project" value="LOCAL" />
       <updated>1747733392174</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="see all filter">
+      <option name="closed" value="true" />
+      <created>1747737083642</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1747737083642</updated>
+    </task>
+    <task id="LOCAL-00025" summary="open product routing">
+      <option name="closed" value="true" />
+      <created>1747753733123</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1747753733123</updated>
+    </task>
+    <task id="LOCAL-00026" summary="breadcrumb">
+      <option name="closed" value="true" />
+      <created>1748253799002</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1748253799002</updated>
+    </task>
+    <task id="LOCAL-00027" summary="project structure">
+      <option name="closed" value="true" />
+      <created>1748263204478</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1748263204479</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +376,10 @@
     <MESSAGE value="overall changes" />
     <MESSAGE value="routing to see-all page and reorganization of project structure" />
     <MESSAGE value="see all page" />
-    <option name="LAST_COMMIT_MESSAGE" value="see all page" />
+    <MESSAGE value="see all filter" />
+    <MESSAGE value="open product routing" />
+    <MESSAGE value="breadcrumb" />
+    <MESSAGE value="project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="project structure" />
   </component>
 </project>
