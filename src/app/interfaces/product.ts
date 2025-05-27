@@ -11,17 +11,26 @@ export interface Price {
     new: string;
 }
 
+export interface Specifications {
+    [key: string]: string;
+}
+
 export interface Product {
-    images: string[];
-    name: string;
     id: string;
     category: ProductCategory;
     discount?: string;
+    type: string;
     mainImage: string;
+    images: string[];
     title: string;
     description: string;
     timer?: string;
     price: Price;
+    brand?: string;
+    specifications?: Specifications;
+    reviews?: any[];
+    relatedProducts?: number[];
+    tabs?: any;
 }
 
 export interface ProductsByCategory {

@@ -6,18 +6,22 @@ import { OpenProductComponent }          from './open-product.component';
 import { OpenProductBreadcrumbComponent } from './open-product-breadcrumb/open-product-breadcrumb.component';
 import { OpenProductGalleryComponent } from './open-product-gallery/open-product-gallery.component';
 import {HomeModule} from "../home/home.module";
+import { OpenProductInfoComponent } from './open-product-info/open-product-info.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
         OpenProductComponent,
         OpenProductBreadcrumbComponent,
-        OpenProductGalleryComponent
+        OpenProductGalleryComponent,
+        OpenProductInfoComponent
     ],
     imports: [
         CommonModule,
         RouterModule,
         NgOptimizedImage,
-        HomeModule
+        HomeModule,
+        FormsModule
     ],
     exports: [
         OpenProductComponent
