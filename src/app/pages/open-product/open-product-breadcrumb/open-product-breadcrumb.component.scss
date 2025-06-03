@@ -20,38 +20,22 @@
         margin-right: 8px;
 
         &--home {
-
         }
+
         &--current {
-            font-weight: bold;
-            color: $general-cyan;
+          font-weight: bold;
+          color: $general-cyan;
         }
 
         &-link {
           text-decoration: none;
           color: inherit;
-          &:hover { text-decoration: underline; }
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
   }
-}
-
-@keyframes shimmer {
-  0%   { background-position: -200px 0 }
-  100% { background-position: 200px 0 }
-}
-
-.skeleton-text {
-  display: inline-block;
-  height: 1em;
-  border-radius: 4px;
-  background: #f0f0f0 linear-gradient(
-                  90deg,
-                  #f0f0f0 0px,
-                  #e0e0e0 40px,
-                  #f0f0f0 80px
-  );
-  background-size: 200px 100%;
-  animation: shimmer 1.2s infinite linear;
 }

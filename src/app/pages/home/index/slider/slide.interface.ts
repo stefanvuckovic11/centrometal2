@@ -1,4 +1,4 @@
-export interface Slide {
+export interface SlideInterface {
     alt: string;
     line1: string;
     line2: string;

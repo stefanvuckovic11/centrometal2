@@ -18,12 +18,10 @@
     </div>
 
     <div class="product-detail__info__general">
-        <!-- Description -->
         <span class="product-detail__info__general__spec">
       {{ product.description }}
     </span><br>
 
-        <!-- Dynamic specs -->
         <ng-container *ngIf="specEntries.length">
             <ng-container *ngFor="let entry of specEntries">
         <span class="product-detail__info__general__spec">

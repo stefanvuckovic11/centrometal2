@@ -1,5 +1,6 @@
 import {
   Component,
+  OnInit,
   AfterViewInit,
   OnDestroy,
   ViewChild,
@@ -8,7 +9,7 @@ import {
   HostListener
 } from '@angular/core';
 import { FooterService } from './footer.service';
-import { FooterBrand, FooterColumn } from './footer';
+import { FooterBrand, FooterColumn } from './footer.interface';
 
 @Component({
   selector: 'app-footer',
@@ -16,39 +17,49 @@ import { FooterBrand, FooterColumn } from './footer';
   styleUrls: ['./footer.component.scss'],
   standalone: false,
 })
-export class FooterComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('inner', { static: true }) inner!: ElementRef<HTMLElement>;
-  @ViewChild('track', { static: true }) track!: ElementRef<HTMLElement>;
-  @ViewChild('prevBtn', { static: true }) prevBtn!: ElementRef<HTMLButtonElement>;
-  @ViewChild('nextBtn', { static: true }) nextBtn!: ElementRef<HTMLButtonElement>;
+export class FooterComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('inner', { static: true })
+  private inner!: ElementRef<HTMLElement>;
 
-  slideWidth = 0;
-  autoSlideInterval: any = null;
+  @ViewChild('track', { static: true })
+  private track!: ElementRef<HTMLElement>;
 
-  brands: FooterBrand[] = [];
-  linkColumns: FooterColumn[] = [];
+  @ViewChild('prevBtn', { static: true })
+  private prevBtn!: ElementRef<HTMLButtonElement>;
 
-  constructor(private renderer: Renderer2, private footerService: FooterService) {}
+  @ViewChild('nextBtn', { static: true })
+  private nextBtn!: ElementRef<HTMLButtonElement>;
 
-  ngAfterViewInit(): void {
-    this.slideWidth = this.inner.nativeElement.offsetWidth * 0.2;
-    this.updateMediaBehavior();
-  }
+  private slideWidth: number = 0;
+  private autoSlideInterval: number | null = null;
 
-  ngOnInit(): void {
+  public brands: FooterBrand[] = [];
+  public linkColumns: FooterColumn[] = [];
+
+  constructor(
+      private renderer: Renderer2,
+      private footerService: FooterService
+  ) {}
+
+  public ngOnInit(): void {
     this.footerService.getFooterData().subscribe(data => {
       this.brands = data.brands;
       this.linkColumns = data.linkColumns;
     });
   }
 
-  ngOnDestroy(): void {
-    if (this.autoSlideInterval) {
+  public ngAfterViewInit(): void {
+    this.slideWidth = this.inner.nativeElement.offsetWidth * 0.2;
+    this.updateMediaBehavior();
+  }
+
+  public ngOnDestroy(): void {
+    if (this.autoSlideInterval !== null) {
       clearInterval(this.autoSlideInterval);
     }
   }
 
-  slidePrev(): void {
+  public slidePrev(): void {
     const trackEl = this.track.nativeElement;
     this.renderer.setStyle(trackEl, 'transition', 'transform 0.2s ease-in-out');
     this.renderer.setStyle(trackEl, 'transform', `translateX(-${this.slideWidth}px)`);
@@ -62,7 +73,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
     trackEl.addEventListener('transitionend', onEnd);
   }
 
-  slideNext(): void {
+  public slideNext(): void {
     const trackEl = this.track.nativeElement;
     trackEl.insertBefore(trackEl.lastElementChild!, trackEl.firstElementChild);
     this.renderer.setStyle(trackEl, 'transition', 'none');
@@ -73,7 +84,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   }
 
   @HostListener('window:resize')
-  onResize(): void {
+  public onResize(): void {
     this.slideWidth = this.inner.nativeElement.offsetWidth * 0.2;
     this.updateMediaBehavior();
   }
@@ -85,13 +96,13 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
     if (window.innerWidth <= 1300) {
       this.renderer.setStyle(prev, 'opacity', '0');
       this.renderer.setStyle(next, 'opacity', '0');
-      if (!this.autoSlideInterval) {
-        this.autoSlideInterval = setInterval(() => this.slidePrev(), 1000);
+      if (this.autoSlideInterval === null) {
+        this.autoSlideInterval = window.setInterval(() => this.slidePrev(), 1000);
       }
     } else {
       this.renderer.setStyle(prev, 'opacity', '1');
       this.renderer.setStyle(next, 'opacity', '1');
-      if (this.autoSlideInterval) {
+      if (this.autoSlideInterval !== null) {
         clearInterval(this.autoSlideInterval);
         this.autoSlideInterval = null;
       }

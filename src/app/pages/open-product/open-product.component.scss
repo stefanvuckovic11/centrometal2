@@ -1,25 +1,5 @@
+@import '../../../styles/animations';
 @import '../../../styles/variables';
-
-@keyframes shimmer {
-  0%   { background-position: -200px 0; }
-  100% { background-position: 200px 0; }
-}
-.skeleton-text {
-  display: inline-block;
-  border-radius: 4px;
-  background: #f0f0f0 linear-gradient(
-                  90deg,
-                  #f0f0f0 0px,
-                  #e0e0e0 40px,
-                  #f0f0f0 80px
-  ) no-repeat;
-  background-size: 200px 100%;
-  animation: shimmer 1.2s infinite linear;
-}
-.skeleton--window {
-  @extend .skeleton-text;
-  border-radius: 8px;
-}
 
 .product-detail {
   margin-top: 2%;
@@ -181,6 +161,7 @@
 
     &__content {
       flex-direction: column;
+
       &__gallery,
       &__info {
         width: 100%;

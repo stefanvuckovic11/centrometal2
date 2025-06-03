@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient }     from '@angular/common/http';
 import { Observable }     from 'rxjs';
-import { NavbarItem }     from './navbar-item';
+import { NavbarItemInterface }     from './navbar-item.interface';
 
 @Injectable({ providedIn: 'root' })
 export class NavbarService {
@@ -9,7 +9,7 @@ export class NavbarService {
 
     constructor(private http: HttpClient) {}
 
-    getBottomItems(): Observable<NavbarItem[]> {
-        return this.http.get<NavbarItem[]>(this.url);
+    getBottomItems(): Observable<NavbarItemInterface[]> {
+        return this.http.get<NavbarItemInterface[]>(this.url);
     }
 }

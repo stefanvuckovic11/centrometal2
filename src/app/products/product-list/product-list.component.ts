@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { forkJoin } from 'rxjs';
 import { ProductService } from '../products.service';
-import { ProductsByCategory, ProductCategory } from '../../interfaces/product';
+import { ProductsByCategory, ProductCategory } from '../../interfaces/product.interface';
 import { Section } from './section';
 import { SectionService } from './section.service';
 
@@ -11,11 +12,11 @@ import { SectionService } from './section.service';
   standalone: false
 })
 export class ProductListComponent implements OnInit {
-  productsByCategory: ProductsByCategory = {};
-  sections: Section[] = [];
-  loading = true;
+  public productsByCategory: ProductsByCategory = {};
+  public sections: Section[] = [];
+  public loading: boolean = true;
 
-  ProductCategory = ProductCategory;
+  public ProductCategory = ProductCategory;
 
   constructor(
       private productService: ProductService,
@@ -23,23 +24,27 @@ export class ProductListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.fetchProducts();
-    this.fetchSections();
-  }
+    this.loading = true;
 
-  private fetchProducts(): void {
-    this.productService.getProducts().subscribe(products => {
-      this.productsByCategory = products.reduce<ProductsByCategory>((acc, p) => {
-        (acc[p.category] = acc[p.category] || []).push(p);
-        return acc;
-      }, {});
-      this.loading = false;
-    });
-  }
+    //paralelrni fork join pristup
+    forkJoin({
+      products: this.productService.getProducts(),
+      sections: this.sectionService.getSections()
+    }).subscribe({
+      next: ({ products, sections }) => {
+        this.productsByCategory = products.reduce<ProductsByCategory>((acc, p) => {
+          (acc[p.category] = acc[p.category] || []).push(p);
+          return acc;
+        }, {});
 
-  private fetchSections(): void {
-    this.sectionService.getSections().subscribe(sections => {
-      this.sections = sections;
+        this.sections = sections;
+
+        this.loading = false;
+      },
+      error: err => {
+        console.error('Greška pri učitavanju proizvoda ili sekcija:', err);
+        this.loading = false;
+      }
     });
   }
 }

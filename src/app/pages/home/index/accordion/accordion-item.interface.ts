@@ -1,4 +1,4 @@
-export interface AccordionItem {
+export interface AccordionItemInterface {
     title: string;
     children?: string[];
     link?: string;

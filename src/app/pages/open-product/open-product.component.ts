@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute }               from '@angular/router';
 import { ProductService }               from '../../products/products.service';
-import { Product }                      from '../../interfaces/product';
+import { ProductInterface }             from '../../interfaces/product.interface';
 import { Subject, takeUntil, map, take } from 'rxjs';
 
 @Component({
@@ -11,23 +11,27 @@ import { Subject, takeUntil, map, take } from 'rxjs';
   standalone: false
 })
 export class OpenProductComponent implements OnInit, OnDestroy {
-  product?: Product;
-  isLoading = true;
-  error?: string;
+  public product?: ProductInterface;
+  public isLoading: boolean = true;
+  public error?: string;
 
-  private destroy$ = new Subject<void>();
+  private destroy$: Subject<void> = new Subject<void>();
 
   constructor(
       private route: ActivatedRoute,
       private productService: ProductService
   ) {}
 
-  ngOnInit() {
-    const idStr = this.route.snapshot.paramMap.get('id');
-    const id    = idStr ? Number(idStr) : NaN;
+  public ngOnInit(): void {
+    this.loadProduct();
+  }
+
+  private loadProduct(): void {
+    const idStr: string | null = this.route.snapshot.paramMap.get('id');
+    const id: number = idStr ? Number(idStr) : NaN;
 
     if (isNaN(id)) {
-      this.error     = 'Invalid product ID';
+      this.error = 'Invalid product ID';
       this.isLoading = false;
       return;
     }
@@ -35,11 +39,11 @@ export class OpenProductComponent implements OnInit, OnDestroy {
     this.productService.getProducts()
         .pipe(
             take(1),
-            map(list => list.find(p => Number(p.id) === id)),
+            map((list: ProductInterface[]) => list.find(p => Number(p.id) === id)),
             takeUntil(this.destroy$)
         )
         .subscribe({
-          next: found => {
+          next: (found?: ProductInterface) => {
             if (!found) {
               this.error = `Product #${id} not found`;
             } else {
@@ -47,13 +51,14 @@ export class OpenProductComponent implements OnInit, OnDestroy {
             }
             this.isLoading = false;
           },
-          error: err => {
-            console.error('greska u ucitavanju proizvoda', err);
+          error: (err: any) => {
+            console.error('Greška u učitavanju proizvoda', err);
+            this.isLoading = false;
           }
         });
   }
 
-  ngOnDestroy() {
+  public ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AccordionItem } from './accordion-item';
+import { AccordionItemInterface } from './accordion-item.interface';
 import { AccordionService } from './accordion.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { AccordionService } from './accordion.service';
   standalone: false
 })
 export class AccordionComponent implements OnInit {
-  items: AccordionItem[] = [];
+  items: AccordionItemInterface[] = [];
 
   constructor(private accordionService: AccordionService) {}
 
@@ -19,7 +19,7 @@ export class AccordionComponent implements OnInit {
     });
   }
 
-  toggle(item: AccordionItem): void {
+  toggle(item: AccordionItemInterface): void {
     if (item.children && item.children.length > 0) {
       item.expanded = !item.expanded;
     }

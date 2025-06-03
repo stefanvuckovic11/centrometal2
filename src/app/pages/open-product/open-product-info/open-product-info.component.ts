@@ -1,5 +1,5 @@
-import { Component, Input, OnChanges } from '@angular/core';
-import { Product } from '../../../interfaces/product';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { ProductInterface } from '../../../interfaces/product.interface';
 
 @Component({
   selector: 'app-open-product-info',
@@ -8,10 +8,10 @@ import { Product } from '../../../interfaces/product';
   standalone: false
 })
 export class OpenProductInfoComponent implements OnChanges {
-  @Input() product!: Product;
-  quantity = 1;
+  @Input() public product!: ProductInterface;
+  public quantity: number = 1;
 
-  get specEntries(): Array<{ label: string; value: string }> {
+  public get specEntries(): Array<{ label: string; value: string }> {
     if (!this.product.specifications) {
       return [];
     }
@@ -20,6 +20,6 @@ export class OpenProductInfoComponent implements OnChanges {
     );
   }
 
-  ngOnChanges() {
+  public ngOnChanges(changes: SimpleChanges): void {
   }
 }

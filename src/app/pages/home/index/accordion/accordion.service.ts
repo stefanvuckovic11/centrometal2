@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { AccordionItem } from './accordion-item';
+import { AccordionItemInterface } from './accordion-item.interface';
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +11,7 @@ export class AccordionService {
 
     constructor(private http: HttpClient) {}
 
-    getItems(): Observable<AccordionItem[]> {
-        return this.http.get<AccordionItem[]>(this.url);
+    getItems(): Observable<AccordionItemInterface[]> {
+        return this.http.get<AccordionItemInterface[]>(this.url);
     }
 }

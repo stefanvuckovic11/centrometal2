@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Product } from '../../../interfaces/product';
+import { ProductInterface } from '../../../interfaces/product.interface';
 
 @Component({
   selector: 'app-open-product-breadcrumb',
@@ -8,5 +8,5 @@ import { Product } from '../../../interfaces/product';
   standalone: false
 })
 export class OpenProductBreadcrumbComponent {
-  @Input() product!: Product;
+  @Input() product!: ProductInterface;
 }

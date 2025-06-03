@@ -11,12 +11,12 @@
 <ng-container *ngIf="!loading">
     <ng-container *ngIf="productsByCategory && sections?.length; else noCategories">
         <div class="product-list">
-            <ng-container *ngFor="let section of sections; let i = index; let isLast = last">
+            <ng-container *ngFor="let section of sections; let first = first; let last = last">
                 <section
                         class="product-list__category"
                         [ngClass]="{
-            'product-list__category--first': i === 0,
-            'product-list__category--last': isLast
+            'product-list__category--first': first,
+            'product-list__category--last': last
           }"
                 >
                     <div class="product-list__category__header">
@@ -28,9 +28,12 @@
                     <ng-container *ngIf="productsByCategory[section.key]?.length; else noProducts">
                         <div class="product-list__category__list">
                             <ng-container
-                                    *ngFor="let product of section.key === ProductCategory.HotOffer
-                  ? productsByCategory[section.key].slice(0, 8)
-                  : productsByCategory[section.key].slice(0, 4)"
+                                    *ngFor="
+                  let product of
+                    (section.key === ProductCategory.HotOffer
+                      ? productsByCategory[section.key].slice(0, 8)
+                      : productsByCategory[section.key].slice(0, 4))
+                "
                             >
                                 <app-product-card [product]="product"></app-product-card>
                             </ng-container>
@@ -52,7 +55,6 @@
                             {{ section.footerButtonText }}
                         </a>
                     </div>
-
                 </section>
             </ng-container>
         </div>

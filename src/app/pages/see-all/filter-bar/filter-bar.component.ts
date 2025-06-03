@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FilterCriteria } from './filter';
 
-
 @Component({
   selector: 'app-filter-bar',
   templateUrl: './filter-bar.component.html',
@@ -9,13 +8,13 @@ import { FilterCriteria } from './filter';
   standalone: false
 })
 export class FilterBarComponent {
-  sortType = '';
-  minPrice = 0;
-  maxPrice = Infinity;
+  public sortType: string = '';
+  public minPrice: number = 0;
+  public maxPrice: number = Infinity;
 
-  @Output() filterChanged = new EventEmitter<FilterCriteria>();
+  @Output() public filterChanged = new EventEmitter<FilterCriteria>();
 
-  applyFilters() {
+  public applyFilters(): void {
     this.filterChanged.emit({
       sortType: this.sortType,
       minPrice: this.minPrice,

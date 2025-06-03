@@ -6,25 +6,36 @@
     </span>
     </div>
 
-    <ng-container *ngTemplateOutlet="recursiveList; context: { $implicit: items, level: 0 }"></ng-container>
+    <ng-container
+            *ngTemplateOutlet="
+      recursiveList;
+      context: { items: items, level: 0 }
+    "
+    ></ng-container>
 
-    <ng-template #recursiveList let-list let-level="level">
-        <ng-container *ngFor="let item of list">
-            <div class="index__left__accordion__item" [style.paddingLeft.px]="level * 16">
-                <ng-container *ngIf="item.link; else hasChildren">
-                    <a [routerLink]="item.link" class="index__left__accordion__title">
+    <ng-template #recursiveList let-items="items" let-level="level">
+        <ng-container *ngFor="let item of items">
+            <div
+                    class="index__left__accordion__item"
+            >
+                <ng-container *ngIf="item.link; else expandedCase">
+                    <a
+                            [routerLink]="item.link"
+                            class="index__left__accordion__title"
+                    >
                         {{ item.title }}
                     </a>
                 </ng-container>
 
-                <ng-template #hasChildren>
+                <ng-template #expandedCase>
                     <div
                             class="index__left__accordion__title"
                             (click)="toggle(item)"
-                            [class.index__left__accordion__title--clickable]="item.children?.length"
+                            [class.index__left__accordion__title--clickable]="
+              item.children?.length
+            "
                     >
                         {{ item.title }}
-
                         <span
                                 *ngIf="item.children?.length"
                                 class="index__left__accordion__icon"
@@ -33,10 +44,16 @@
             </span>
                     </div>
 
-                    <div class="index__left__accordion__content" *ngIf="item.expanded">
+                    <div
+                            class="index__left__accordion__content"
+                            *ngIf="item.expanded"
+                    >
                         <ng-container *ngIf="item.children?.length">
                             <ng-container
-                                    *ngTemplateOutlet="recursiveList; context: { $implicit: item.children, level: level + 1 }"
+                                    *ngTemplateOutlet="
+                  recursiveList;
+                  context: { items: item.children, level: level + 1 }
+                "
                             ></ng-container>
                         </ng-container>
                     </div>

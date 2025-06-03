@@ -15,7 +15,7 @@ export interface Specifications {
     [key: string]: string;
 }
 
-export interface Product {
+export interface ProductInterface {
     id: string;
     category: ProductCategory;
     discount?: string;
@@ -34,5 +34,5 @@ export interface Product {
 }
 
 export interface ProductsByCategory {
-    [category: string]: Product[];
+    [category: string]: ProductInterface[];
 }

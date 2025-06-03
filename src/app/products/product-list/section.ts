@@ -1,4 +1,4 @@
-import { ProductCategory } from '../../interfaces/product';
+import { ProductCategory } from '../../interfaces/product.interface';
 
 export interface Section {
     key: ProductCategory;

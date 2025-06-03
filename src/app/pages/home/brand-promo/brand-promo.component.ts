@@ -1,9 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  HostListener,
-} from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-brand-promo',
@@ -12,27 +7,31 @@ import {
   standalone: false
 })
 export class BrandPromoComponent implements OnInit {
-  @Input() delay = 0;
+  @Input() public delay: number = 0;
 
-  isVisible = true;
-  private showTimeout?: ReturnType<typeof setTimeout>;
+  public isVisible: boolean = true;
+  private showTimeout?: number;
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.initialize();
   }
+
   private initialize(): void {
     clearTimeout(this.showTimeout);
+
     if (window.innerWidth <= 1300) {
-      this.showTimeout = setTimeout(() => this.isVisible = true, this.delay);
+      this.showTimeout = window.setTimeout(() => {
+        this.isVisible = true;
+      }, this.delay);
     }
   }
 
-  onClose(): void {
+  public onClose(): void {
     this.isVisible = false;
   }
 
   @HostListener('window:resize')
-  onResize(): void {
+  public onResize(): void {
     if (window.innerWidth <= 1300) {
       this.initialize();
     }

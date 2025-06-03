@@ -7,7 +7,7 @@ import {
   Renderer2
 } from '@angular/core';
 
-import { Slide } from './slide';
+import { SlideInterface } from './slide.interface';
 
 @Component({
   selector: 'app-slider',
@@ -18,7 +18,7 @@ import { Slide } from './slide';
 export class SliderComponent implements AfterViewInit, OnDestroy {
   @ViewChild('track', { static: true }) track!: ElementRef<HTMLElement>;
 
-  slides: Slide[] = [
+  slides: SlideInterface[] = [
     {
       alt: 'motorna šega',
       line1: 'motorna',

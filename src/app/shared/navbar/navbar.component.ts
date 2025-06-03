@@ -1,6 +1,6 @@
 import { Component, OnInit }        from '@angular/core';
 import { NavbarService }            from './navbar.service';
-import { NavbarItem }               from './navbar-item';
+import { NavbarItemInterface }               from './navbar-item.interface';
 
 @Component({
   selector: 'app-navbar',
@@ -9,8 +9,8 @@ import { NavbarItem }               from './navbar-item';
   standalone: false
 })
 export class NavbarComponent implements OnInit {
-  cartTotal = 0;
-  bottomItems: NavbarItem[] = [];
+  public cartTotal = 0;
+  public bottomItems: NavbarItemInterface[] = [];
   constructor(private navService: NavbarService) {}
 
   ngOnInit(): void {

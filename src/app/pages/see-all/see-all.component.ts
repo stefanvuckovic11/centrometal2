@@ -3,24 +3,23 @@ import { ActivatedRoute }            from '@angular/router';
 import { ProductService }            from '../../products/products.service';
 import { SectionService }            from '../../products/product-list/section.service';
 import { Section }                   from '../../products/product-list/section';
-import { Product }                   from '../../interfaces/product';
+import { ProductInterface }          from '../../interfaces/product.interface';
 import { FilterCriteria }            from './filter-bar/filter';
-
 
 @Component({
   selector: 'app-see-all',
   templateUrl: './see-all.component.html',
   styleUrls: ['./see-all.component.scss'],
-  standalone:false
+  standalone: false
 })
 export class SeeAllComponent implements OnInit {
-  category           = '';
-  headerText         = '';
-  loading            = true;
+  private category: string = '';
+  public headerText: string = '';
+  public loading: boolean = true;
 
-  allProducts: Product[]       = [];
-  displayedProducts: Product[] = [];
-  skeletonArray    = Array(12);
+  private allProducts: ProductInterface[] = [];
+  public displayedProducts: ProductInterface[] = [];
+  public skeletonArray: any[] = Array(12);
 
   constructor(
       private route: ActivatedRoute,
@@ -28,20 +27,21 @@ export class SeeAllComponent implements OnInit {
       private sectionService: SectionService
   ) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.category = params.get('category') || '';
       this.loadProducts();
-      this.resolveHeaderText();
     });
   }
 
   private loadProducts(): void {
     this.loading = true;
     this.productService.getProducts().subscribe(all => {
-      this.allProducts       = all.filter(p => p.category === this.category);
+      this.allProducts = all.filter(p => p.category === this.category);
       this.displayedProducts = [...this.allProducts];
-      this.loading           = false;
+      this.loading = false;
+
+      this.resolveHeaderText();
     });
   }
 
@@ -52,7 +52,7 @@ export class SeeAllComponent implements OnInit {
     });
   }
 
-  onFilterChange(criteria: FilterCriteria): void {
+  public onFilterChange(criteria: FilterCriteria): void {
     let filtered = this.allProducts.filter(p => {
       const price = parseFloat(p.price.new.replace(/[^0-9.]/g, ''));
       return price >= criteria.minPrice && price <= criteria.maxPrice;
