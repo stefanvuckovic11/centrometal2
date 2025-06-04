@@ -1,20 +1,22 @@
-# ignore all node modules
+# Node modules
 node_modules/
 
-# (optional) some other typical ignores
+# Okviri za Angular / Vite
 dist/
+.angular/
+.cache/
+.vite/
+
+# Okviri za IDE i OS
+.idea/
+.vscode/
+*.log
+*.swp
 .DS_Store
+
+# Environment fajlovi
 .env
+.env.local
 
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-/node_modules
-/.angular
-/.idea
-
+/.angular/
+/.idea/

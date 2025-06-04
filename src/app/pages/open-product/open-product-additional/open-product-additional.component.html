@@ -1,0 +1,70 @@
+<div class="product-detail__additional">
+    <div class="product-detail__additional__tabs">
+        <button
+                class="product-detail__additional__tabs__tab"
+                [class.product-detail__additional__tabs__tab--active]="activeTab === 'proizvodna-lista'"
+                (click)="setActiveTab('proizvodna-lista')"
+        >
+            PROIZVODNA LISTA
+        </button>
+        <button
+                class="product-detail__additional__tabs__tab"
+                [class.product-detail__additional__tabs__tab--active]="activeTab === 'guide'"
+                (click)="setActiveTab('guide')"
+        >
+            UPUTSTVO ZA RUKOVANJE
+        </button>
+        <button
+                class="product-detail__additional__tabs__tab"
+                [class.product-detail__additional__tabs__tab--active]="activeTab === 'rating'"
+                (click)="setActiveTab('rating')"
+        >
+            OCJENA
+        </button>
+        <button
+                class="product-detail__additional__tabs__tab"
+                [class.product-detail__additional__tabs__tab--active]="activeTab === 'email'"
+                (click)="setActiveTab('email')"
+        >
+            E-MAIL
+        </button>
+    </div>
+
+    <div
+            class="product-detail__additional__tab-content"
+            [class.product-detail__additional__tab-content--active]="activeTab === 'proizvodna-lista'"
+            id="proizvodna-lista"
+    >
+        <ul class="product-detail__additional__tab-content__list">
+            <li class="product-detail__additional__tab-content__list__item">
+                Samostojeći: DA
+            </li>
+
+        </ul>
+    </div>
+
+    <div
+            class="product-detail__additional__tab-content"
+            [class.product-detail__additional__tab-content--active]="activeTab === 'guide'"
+            id="guide"
+    >
+    </div>
+
+    <div
+            class="product-detail__additional__tab-content"
+            [class.product-detail__additional__tab-content--active]="activeTab === 'rating'"
+            id="rating"
+    >
+
+    </div>
+
+    <div
+            class="product-detail__additional__tab-content"
+            [class.product-detail__additional__tab-content--active]="activeTab === 'email'"
+            id="email"
+    >
+        <p class="product-detail__additional__tab-content__paragraph">
+            Kontaktirajte nas za više informacija.
+        </p>
+    </div>
+</div>
