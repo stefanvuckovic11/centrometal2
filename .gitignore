@@ -17,6 +17,3 @@ dist/
 # Environment fajlovi
 .env
 .env.local
-
-/.angular/
-/.idea/
