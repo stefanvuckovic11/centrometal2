@@ -1,5 +1,6 @@
 import {
   Component,
+  OnInit,
   AfterViewInit,
   OnDestroy,
   ViewChild,
@@ -7,6 +8,8 @@ import {
   Renderer2,
   HostListener
 } from '@angular/core';
+import { FooterService } from './footer.service';
+import { FooterBrand, FooterColumn } from './footer.interface';
 
 @Component({
   selector: 'app-footer',
@@ -14,83 +17,49 @@ import {
   styleUrls: ['./footer.component.scss'],
   standalone: false,
 })
-export class FooterComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('inner', { static: true }) inner!: ElementRef<HTMLElement>;
-  @ViewChild('track', { static: true }) track!: ElementRef<HTMLElement>;
-  @ViewChild('prevBtn', { static: true }) prevBtn!: ElementRef<HTMLButtonElement>;
-  @ViewChild('nextBtn', { static: true }) nextBtn!: ElementRef<HTMLButtonElement>;
+export class FooterComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('inner', { static: true })
+  private inner!: ElementRef<HTMLElement>;
 
-  slideWidth = 0;
-  autoSlideInterval: any = null;
+  @ViewChild('track', { static: true })
+  private track!: ElementRef<HTMLElement>;
 
-  brands = [
-    { name: 'Sony', img: '/images/sony.png' },
-    { name: 'Panasonic', img: '/images/panasonic.png' },
-    { name: 'Gorenje', img: '/images/gorenje.png' },
-    { name: 'Samsung', img: '/images/samsung.png' },
-    { name: 'Indesit', img: '/images/indesit.png' }
-  ];
+  @ViewChild('prevBtn', { static: true })
+  private prevBtn!: ElementRef<HTMLButtonElement>;
 
-  linkColumns = [
-    {
-      title: 'Informacije',
-      links: [
-        { label: 'O nama', url: '/about' },
-        { label: 'Gdje kupiti', url: '/where-to-buy' },
-        { label: 'Zapošljavanje', url: '/careers' },
-        { label: 'Aktivnosti', url: '/activities' }
-      ]
-    },
-    {
-      title: 'Aktivnosti',
-      links: [
-        { label: 'Akcije', url: '/action' },
-        { label: 'Noviteti', url: '/news' },
-        { label: 'Rasprodaja', url: '/sale' },
-        { label: 'Marketing', url: '/marketing' }
-      ]
-    },
-    {
-      title: 'Moja strana',
-      links: [
-        { label: 'Registracija', url: '/register' },
-        { label: 'Prijava', url: '/login' },
-        { label: 'Korisnička strana', url: '/account' },
-        { label: 'Korpa', url: '/cart' }
-      ]
-    },
-    {
-      title: 'Plaćanje i dostava',
-      links: [
-        { label: 'Načini plaćanja', url: '/payment-methods' },
-        { label: 'Sigurnost plaćanja', url: '/payment-security' },
-        { label: 'Brza i pouzdana dostava', url: '/delivery' },
-        { label: 'Odaberite datum dostave', url: '/delivery-date' }
-      ]
-    },
-    {
-      title: 'Povrat i zamjena',
-      links: [
-        { label: 'Servis', url: '/service' },
-        { label: 'Reklamacije', url: '/complaints' }
-      ]
-    }
-  ];
+  @ViewChild('nextBtn', { static: true })
+  private nextBtn!: ElementRef<HTMLButtonElement>;
 
-  constructor(private renderer: Renderer2) {}
+  private slideWidth: number = 0;
+  private autoSlideInterval: number | null = null;
 
-  ngAfterViewInit(): void {
+  public brands: FooterBrand[] = [];
+  public linkColumns: FooterColumn[] = [];
+
+  constructor(
+      private renderer: Renderer2,
+      private footerService: FooterService
+  ) {}
+
+  public ngOnInit(): void {
+    this.footerService.getFooterData().subscribe(data => {
+      this.brands = data.brands;
+      this.linkColumns = data.linkColumns;
+    });
+  }
+
+  public ngAfterViewInit(): void {
     this.slideWidth = this.inner.nativeElement.offsetWidth * 0.2;
     this.updateMediaBehavior();
   }
 
-  ngOnDestroy(): void {
-    if (this.autoSlideInterval) {
+  public ngOnDestroy(): void {
+    if (this.autoSlideInterval !== null) {
       clearInterval(this.autoSlideInterval);
     }
   }
 
-  slidePrev(): void {
+  public slidePrev(): void {
     const trackEl = this.track.nativeElement;
     this.renderer.setStyle(trackEl, 'transition', 'transform 0.2s ease-in-out');
     this.renderer.setStyle(trackEl, 'transform', `translateX(-${this.slideWidth}px)`);
@@ -104,7 +73,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
     trackEl.addEventListener('transitionend', onEnd);
   }
 
-  slideNext(): void {
+  public slideNext(): void {
     const trackEl = this.track.nativeElement;
     trackEl.insertBefore(trackEl.lastElementChild!, trackEl.firstElementChild);
     this.renderer.setStyle(trackEl, 'transition', 'none');
@@ -115,7 +84,7 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
   }
 
   @HostListener('window:resize')
-  onResize(): void {
+  public onResize(): void {
     this.slideWidth = this.inner.nativeElement.offsetWidth * 0.2;
     this.updateMediaBehavior();
   }
@@ -127,13 +96,13 @@ export class FooterComponent implements AfterViewInit, OnDestroy {
     if (window.innerWidth <= 1300) {
       this.renderer.setStyle(prev, 'opacity', '0');
       this.renderer.setStyle(next, 'opacity', '0');
-      if (!this.autoSlideInterval) {
-        this.autoSlideInterval = setInterval(() => this.slidePrev(), 1000);
+      if (this.autoSlideInterval === null) {
+        this.autoSlideInterval = window.setInterval(() => this.slidePrev(), 1000);
       }
     } else {
       this.renderer.setStyle(prev, 'opacity', '1');
       this.renderer.setStyle(next, 'opacity', '1');
-      if (this.autoSlideInterval) {
+      if (this.autoSlideInterval !== null) {
         clearInterval(this.autoSlideInterval);
         this.autoSlideInterval = null;
       }

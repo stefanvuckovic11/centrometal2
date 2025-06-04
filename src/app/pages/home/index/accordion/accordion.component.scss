@@ -1,0 +1,132 @@
+@import "../../../../../styles/variables";
+
+
+.index{
+  &__left{
+    &__accordion {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      overflow: visible;
+      margin-bottom: 3.5%;
+      border: 1px solid rgba(128, 128, 128, 0.37);
+      border-radius: 3px;
+
+      &__header {
+        background: $navbar-dark-blue;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+      }
+
+      &__header-icon {
+        font-size: 30px;
+      }
+
+      &__item {
+        border-bottom: 1px solid grey;
+        width: 100%;
+      }
+
+      &__title {
+        background: white;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 15px 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        transition: background 0.3s ease-in-out;
+        width: 100%;
+
+        &:hover {
+          background-color: rgba(128, 128, 128, 0.43);
+        }
+      }
+
+      &__icon {
+        font-weight: bold;
+      }
+
+      &__content {
+        background: white;
+        padding: 10px 0;
+        font-size: 14px;
+        border-top: 1px solid grey;
+        width: 100%;
+      }
+
+      &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      &__list-item {
+        padding: 12px 20px;
+        font-size: 14px;
+        border-bottom: 1px solid grey;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+        width: 100%;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          background-color: $cyan-hover;
+        }
+      }
+    }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+  .index__left__accordion {
+    width: 100%;
+    margin: 20px auto;
+    border: none;
+  }
+
+  .index__left__accordion__header {
+    width: 100%;
+    margin: 0;
+    background: $general-cyan;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .index__left__accordion__header-text {
+    display: none;
+  }
+
+  .index__left__accordion__item,
+  .index__left__accordion__title,
+  .index__left__accordion__list-item {
+    width: 100%;
+  }
+
+  .index__left__accordion__title {
+    color: white;
+    background-color: $general-cyan;
+    font-size: 18px;
+  }
+
+  .index__left__accordion__list-item {
+    font-size: 16px;
+    color: white;
+    background-color: $general-cyan;
+  }
+}

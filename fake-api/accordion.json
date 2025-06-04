@@ -1,0 +1,115 @@
+[
+  {
+    "title": "BIJELA TEHNIKA",
+    "children": [
+      { "title": "Veš mašine" },
+      { "title": "Sušilice" },
+      {
+        "title": "Frižideri",
+        "children": [
+          { "title": "Kombinovani" },
+          { "title": "Samostojeći" },
+          { "title": "Ugradni" }
+        ]
+      },
+      { "title": "Štednjaci" },
+      { "title": "Zamrzivači" }
+    ]
+  },
+  {
+    "title": "UGRADNA TEHNIKA",
+    "children": [
+      { "title": "Ugradbene rerne" },
+      {
+        "title": "Ugradbene ploče",
+        "children": [
+          { "title": "Staklokeramičke" },
+          { "title": "Indukcione" },
+          { "title": "Plinske" }
+        ]
+      },
+      { "title": "Mašine za suđe" },
+      { "title": "Aspiratori" }
+    ]
+  },
+  {
+    "title": "KLIMATIZACIJA I GRIJANJE",
+    "link": "/climate"
+  },
+  {
+    "title": "MALI KUĆNI APARATI",
+    "children": [
+      {
+        "title": "Mikseri",
+        "children": [
+          { "title": "Ručni" },
+          { "title": "Stoni" }
+        ]
+      },
+      { "title": "Tosteri" },
+      { "title": "Aparati za kafu" },
+      { "title": "Usisivači" }
+    ]
+  },
+  {
+    "title": "TV I VIDEO",
+    "children": [
+      {
+        "title": "LED televizori",
+        "children": [
+          { "title": "32 inča" },
+          { "title": "40 inča" },
+          { "title": "50+ inča" }
+        ]
+      },
+      { "title": "Smart TV" },
+      { "title": "Projektori" }
+    ]
+  },
+  {
+    "title": "AUDIO",
+    "children": [
+      { "title": "Zvučnici" },
+      { "title": "Slušalice" },
+      { "title": "Radio uređaji" }
+    ]
+  },
+  {
+    "title": "TELEFONIJA",
+    "children": [
+      {
+        "title": "Mobilni telefoni",
+        "children": [
+          { "title": "Android" },
+          { "title": "iPhone" }
+        ]
+      },
+      { "title": "Fiksni telefoni" },
+      { "title": "Dodaci za telefone" }
+    ]
+  },
+  {
+    "title": "KAMERE I FOTO APARATI",
+    "link": "/cameras"
+  },
+  {
+    "title": "AUTO TEHNIKA",
+    "link": "/auto"
+  },
+  {
+    "title": "RAČUNARI I PERIFERIJE",
+    "link": "/computers"
+  },
+  {
+    "title": "KONZOLE I IGRICE",
+    "link": "/gaming"
+  },
+  {
+    "title": "POSTELJINE",
+    "link": "/linen"
+  },
+  {
+    "title": "KUPOVINA PREKO T-COMA",
+    "link": "/t-com"
+  }
+]

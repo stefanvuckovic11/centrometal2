@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "privilege": "admin"
+    },
+    {
+      "id": "2",
+      "username": "stefan",
+      "email": "stefan@gmail.com",
+      "password": "stefan",
+      "privilege": "user"
+    },
+    {
+      "id": "7d9c",
+      "username": "stefke",
+      "email": "stefke@gmail.com",
+      "password": "stefke",
+      "privilege": "user"
+    },
+    {
+      "id": "a2b6",
+      "username": "stefan.vuckovic@synergysuite.com",
+      "email": "stefan.vuckovic@synergysuite.com",
+      "password": "stefan.vuckovic@synergysuite.com"
+    },
+    {
+      "id": "65f1",
+      "username": "stefke1",
+      "email": "stefanvuckovic79@gmail.com",
+      "password": "stefan"
+    }
+  ]
+}

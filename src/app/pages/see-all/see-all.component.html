@@ -1,0 +1,36 @@
+<div class="see-all">
+    <div class="see-all__left">
+        <app-accordion></app-accordion>
+        <app-brand-search></app-brand-search>
+        <app-kit-promo></app-kit-promo>
+    </div>
+
+    <div class="see-all__right">
+        <div class="see-all__category__header">
+      <span class="see-all__category__header-text">
+        {{ headerText }}
+      </span>
+        </div>
+        <app-filter-bar (filterChanged)="onFilterChange($event)"></app-filter-bar>
+        <div class="see-all__grid">
+            <ng-container *ngIf="loading">
+                <ng-container *ngFor="let _ of skeletonArray">
+                    <div class="see-all__grid__skeleton-card"></div>
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="!loading">
+                <ng-container *ngIf="displayedProducts.length; else noProducts">
+                    <ng-container *ngFor="let product of displayedProducts">
+                        <app-product-card [product]="product"></app-product-card>
+                    </ng-container>
+                </ng-container>
+
+                <ng-template #noProducts>
+                    <p class="see-all__empty">
+                        Trenutno nema dostupnih proizvoda u ovoj kategoriji.
+                    </p>
+                </ng-template>
+            </ng-container>
+        </div>
+    </div>
+</div>

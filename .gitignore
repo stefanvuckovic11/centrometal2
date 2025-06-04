@@ -15,3 +15,8 @@ dist/
 /dataSources/
 /dataSources.local.xml
 /node_modules
+/.angular
+/.idea
+.angular
+.idea
+

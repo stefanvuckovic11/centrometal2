@@ -1,0 +1,44 @@
+
+
+.video-box {
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__thumbnail {
+    width: 100%;
+    display: block;
+  }
+
+  &__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__play-button::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+  }
+
+  &__content {
+    width: 100%;
+    display: block;
+  }
+}

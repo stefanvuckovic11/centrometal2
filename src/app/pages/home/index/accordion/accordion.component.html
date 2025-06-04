@@ -1,0 +1,64 @@
+<div class="index__left__accordion">
+    <div class="index__left__accordion__header">
+        <i class="index__left__accordion__header-icon fa fa-th-large"></i>
+        <span class="index__left__accordion__header-text">
+      Kupuj po kategoriji
+    </span>
+    </div>
+
+    <ng-container
+            *ngTemplateOutlet="
+      recursiveList;
+      context: { items: items, level: 0 }
+    "
+    ></ng-container>
+
+    <ng-template #recursiveList let-items="items" let-level="level">
+        <ng-container *ngFor="let item of items">
+            <div
+                    class="index__left__accordion__item"
+            >
+                <ng-container *ngIf="item.link; else expandedCase">
+                    <a
+                            [routerLink]="item.link"
+                            class="index__left__accordion__title"
+                    >
+                        {{ item.title }}
+                    </a>
+                </ng-container>
+
+                <ng-template #expandedCase>
+                    <div
+                            class="index__left__accordion__title"
+                            (click)="toggle(item)"
+                            [class.index__left__accordion__title--clickable]="
+              item.children?.length
+            "
+                    >
+                        {{ item.title }}
+                        <span
+                                *ngIf="item.children?.length"
+                                class="index__left__accordion__icon"
+                        >
+              {{ item.expanded ? '–' : '+' }}
+            </span>
+                    </div>
+
+                    <div
+                            class="index__left__accordion__content"
+                            *ngIf="item.expanded"
+                    >
+                        <ng-container *ngIf="item.children?.length">
+                            <ng-container
+                                    *ngTemplateOutlet="
+                  recursiveList;
+                  context: { items: item.children, level: level + 1 }
+                "
+                            ></ng-container>
+                        </ng-container>
+                    </div>
+                </ng-template>
+            </div>
+        </ng-container>
+    </ng-template>
+</div>

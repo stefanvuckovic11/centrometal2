@@ -1,0 +1,66 @@
+<div *ngIf="loading" class="product-list__loader">
+    <img
+            class="product-list__loader__image"
+            ngSrc="/images/spinner.gif"
+            alt="Loading…"
+            width="193"
+            height="192"
+    />
+</div>
+
+<ng-container *ngIf="!loading">
+    <ng-container *ngIf="productsByCategory && sections?.length; else noCategories">
+        <div class="product-list">
+            <ng-container *ngFor="let section of sections; let first = first; let last = last">
+                <section
+                        class="product-list__category"
+                        [ngClass]="{
+            'product-list__category--first': first,
+            'product-list__category--last': last
+          }"
+                >
+                    <div class="product-list__category__header">
+            <span class="product-list__category__header-text">
+              <i [class]="section.iconClass" aria-hidden="true"></i> {{ section.headerText }}
+            </span>
+                    </div>
+
+                    <ng-container *ngIf="productsByCategory[section.key]?.length; else noProducts">
+                        <div class="product-list__category__list">
+                            <ng-container
+                                    *ngFor="
+                  let product of
+                    (section.key === ProductCategory.HotOffer
+                      ? productsByCategory[section.key].slice(0, 8)
+                      : productsByCategory[section.key].slice(0, 4))
+                "
+                            >
+                                <app-product-card [product]="product"></app-product-card>
+                            </ng-container>
+                        </div>
+                    </ng-container>
+
+                    <ng-template #noProducts>
+                        <p class="product-list__category__empty">
+                            Nema dostupnih proizvoda u ovoj kategoriji.
+                        </p>
+                    </ng-template>
+
+                    <div class="product-list__category__footer">
+                        <a
+                                class="product-list__category__footer__button"
+                                [routerLink]="['/see-all', section.key]"
+                                target="_blank"
+                        >
+                            {{ section.footerButtonText }}
+                        </a>
+                    </div>
+                </section>
+            </ng-container>
+        </div>
+    </ng-container>
+
+    <ng-template #noCategories>
+        <p class="product-list__empty-all">Trenutno nema dostupnih proizvoda.</p>
+    </ng-template>
+</ng-container>

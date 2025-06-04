@@ -1,0 +1,68 @@
+@import '../../../../styles/variables';
+
+.newsletter {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $navbar-dark-blue;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  &__icon {
+    margin: 0 10px;
+  }
+
+  &__title {
+    /* inherits header styles */
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__input-email,
+  &__input-name {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  &__submit {
+    background-color: $general-cyan;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 1px;
+
+    &:hover {
+      background-color: #2b6ca3;
+    }
+  }
+}
