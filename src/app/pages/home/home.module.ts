@@ -27,7 +27,8 @@ import { KitPromoComponent } from './kit-promo/kit-promo.component';
     exports: [
         AccordionComponent,
         BrandSearchComponent,
-        KitPromoComponent
+        KitPromoComponent,
+        NewsletterComponent
     ],
     imports: [
         CommonModule,

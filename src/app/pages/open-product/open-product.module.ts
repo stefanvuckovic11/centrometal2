@@ -8,13 +8,15 @@ import { OpenProductGalleryComponent } from './open-product-gallery/open-product
 import {HomeModule} from "../home/home.module";
 import { OpenProductInfoComponent } from './open-product-info/open-product-info.component';
 import {FormsModule} from "@angular/forms";
+import { VideoBoxComponent } from './video-box/video-box.component';
 
 @NgModule({
     declarations: [
         OpenProductComponent,
         OpenProductBreadcrumbComponent,
         OpenProductGalleryComponent,
-        OpenProductInfoComponent
+        OpenProductInfoComponent,
+        VideoBoxComponent
     ],
     imports: [
         CommonModule,

@@ -1,0 +1,26 @@
+<div class="video-box">
+    <div class="video-box__wrapper">
+        <ng-container *ngIf="!isPlaying; else showVideo">
+            <img
+                    class="video-box__thumbnail"
+                    [src]="thumbnail"
+                    alt="Video Thumbnail"
+            />
+            <div
+                    class="video-box__play-button"
+                    (click)="playVideo()"
+            ></div>
+        </ng-container>
+
+        <ng-template #showVideo>
+            <video
+                #videoPlayer
+                class="video-box__content"
+                [src]="videoSrc"
+                loop
+                muted
+                (click)="stopVideo()"
+            ></video>
+        </ng-template>
+    </div>
+</div>
