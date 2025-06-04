@@ -17,4 +17,6 @@ dist/
 /node_modules
 /.angular
 /.idea
+.angular
+.idea
 
