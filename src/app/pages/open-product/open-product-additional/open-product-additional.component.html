@@ -1,0 +1,106 @@
+<ng-container *ngIf="product; else skeletonLoader">
+    <div class="product-detail__additional">
+        <div class="product-detail__additional__tabs">
+            <button
+                    class="product-detail__additional__tabs__tab"
+                    [class.product-detail__additional__tabs__tab--active]="activeTab === 'proizvodna-lista'"
+                    (click)="setActiveTab('proizvodna-lista')"
+            >
+                PROIZVODNA LISTA
+            </button>
+            <button
+                    class="product-detail__additional__tabs__tab"
+                    [class.product-detail__additional__tabs__tab--active]="activeTab === 'guide'"
+                    (click)="setActiveTab('guide')"
+            >
+                UPUTSTVO ZA RUKOVANJE
+            </button>
+            <button
+                    class="product-detail__additional__tabs__tab"
+                    [class.product-detail__additional__tabs__tab--active]="activeTab === 'rating'"
+                    (click)="setActiveTab('rating')"
+            >
+                OCJENA
+            </button>
+            <button
+                    class="product-detail__additional__tabs__tab"
+                    [class.product-detail__additional__tabs__tab--active]="activeTab === 'email'"
+                    (click)="setActiveTab('email')"
+            >
+                E-MAIL
+            </button>
+        </div>
+
+        <div
+                class="product-detail__additional__tab-content"
+                [class.product-detail__additional__tab-content--active]="activeTab === 'proizvodna-lista'"
+                id="proizvodna-lista"
+        >
+            <ul class="product-detail__additional__tab-content__list">
+                <li class="product-detail__additional__tab-content__list__item">
+                    Samostojeći: {{ product.standalone ? 'DA' : 'NE' }}
+                </li>
+            </ul>
+        </div>
+
+        <div
+                class="product-detail__additional__tab-content"
+                [class.product-detail__additional__tab-content--active]="activeTab === 'guide'"
+                id="guide"
+        >
+            <p *ngIf="product.manual; else guideEmpty">
+                {{ product.manual }}
+            </p>
+            <ng-template #guideEmpty>
+                <p class="product-detail__additional__tab-content__paragraph">
+                    Uputstvo nije dostupno.
+                </p>
+            </ng-template>
+        </div>
+
+        <div
+                class="product-detail__additional__tab-content"
+                [class.product-detail__additional__tab-content--active]="activeTab === 'rating'"
+                id="rating"
+        >
+            <p *ngIf="product.rating; else ratingEmpty">
+                Ocjena: {{ product.rating }} / 5
+            </p>
+            <ng-template #ratingEmpty>
+                <p class="product-detail__additional__tab-content__paragraph">
+                    Nema ocjena za ovaj proizvod.
+                </p>
+            </ng-template>
+        </div>
+
+        <div
+                class="product-detail__additional__tab-content"
+                [class.product-detail__additional__tab-content--active]="activeTab === 'email'"
+                id="email"
+        >
+            <p class="product-detail__additional__tab-content__paragraph">
+                Kontaktirajte nas za više informacija:
+            </p>
+            <a [href]="'mailto:' + product.contactEmail">{{ product.contactEmail }}</a>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #skeletonLoader>
+    <div class="product-detail__additional">
+        <div class="product-detail__additional__tabs">
+            <span class="skeleton-text skeleton-text--medium"></span>
+            <span class="skeleton-text skeleton-text--medium"></span>
+            <span class="skeleton-text skeleton-text--medium"></span>
+            <span class="skeleton-text skeleton-text--medium"></span>
+        </div>
+        <div class="product-detail__additional__tab-content product-detail__additional__tab-content--active">
+            <div class="additional-skeleton__content">
+                <span class="skeleton-text skeleton--window" style="height: 1.5rem; width: 50%;"></span>
+                <span class="skeleton-text skeleton--window" style="height: 1rem;   width: 30%;"></span>
+                <span class="skeleton-text skeleton--window" style="height: 1rem;   width: 40%;"></span>
+                <span class="skeleton-text skeleton--window" style="height: 1rem;   width: 60%;"></span>
+            </div>
+        </div>
+    </div>
+</ng-template>

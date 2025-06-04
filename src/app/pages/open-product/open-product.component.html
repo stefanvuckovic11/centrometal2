@@ -1,8 +1,7 @@
 <div class="product-detail">
     <div class="product-detail__left">
         <ng-container *ngIf="product; else breadcrumbSkeleton">
-            <app-open-product-breadcrumb [product]="product">
-            </app-open-product-breadcrumb>
+            <app-open-product-breadcrumb [product]="product"></app-open-product-breadcrumb>
         </ng-container>
         <ng-template #breadcrumbSkeleton>
             <nav class="product-detail__breadcrumb breadcrumb--skeleton">
@@ -25,11 +24,11 @@
                 </ul>
             </nav>
         </ng-template>
+
         <div class="product-detail__content">
             <div class="product-detail__content__gallery">
                 <ng-container *ngIf="product; else gallerySkeleton">
-                    <app-open-product-gallery [images]="product.images">
-                    </app-open-product-gallery>
+                    <app-open-product-gallery [images]="product.images"></app-open-product-gallery>
                 </ng-container>
                 <ng-template #gallerySkeleton>
                     <div class="product-detail__gallery__slider">
@@ -37,8 +36,8 @@
                             <div class="product-detail__gallery__slider__track-slide">
                 <span
                         class="skeleton-text skeleton--window"
-                        style="display: block; width: 100%; height: 400px;">
-                </span>
+                        style="display: block; width: 100%; height: 400px;"
+                ></span>
                             </div>
                         </div>
                         <div class="product-detail__gallery__slider__thumbnails">
@@ -46,18 +45,18 @@
                                 <div class="product-detail__gallery__slider__thumbnails-item">
                   <span
                           class="skeleton-text skeleton--window"
-                          style="display: block; width: 80px; height: 80px;">
-                  </span>
+                          style="display: block; width: 80px; height: 80px;"
+                  ></span>
                                 </div>
                             </ng-container>
                         </div>
                     </div>
                 </ng-template>
             </div>
+
             <div class="product-detail__content__info">
                 <ng-container *ngIf="product; else infoSkeleton">
-                    <app-open-product-info [product]="product">
-                    </app-open-product-info>
+                    <app-open-product-info [product]="product"></app-open-product-info>
                 </ng-container>
                 <ng-template #infoSkeleton>
                     <div class="product-detail__info-skeleton">
@@ -69,9 +68,11 @@
                     </div>
                 </ng-template>
             </div>
-
         </div>
+        <app-open-product-additional [product]="product"></app-open-product-additional>
     </div>
+
+
     <div class="product-detail__right">
         <app-video-box
                 [thumbnail]="'images/3.png'"
@@ -82,6 +83,5 @@
                 [videoSrc]="'https://www.w3schools.com/html/movie.mp4'"
         ></app-video-box>
         <app-newsletter></app-newsletter>
-
     </div>
 </div>
