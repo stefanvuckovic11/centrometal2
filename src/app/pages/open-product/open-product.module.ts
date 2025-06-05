@@ -10,25 +10,31 @@ import { OpenProductInfoComponent } from './open-product-info/open-product-info.
 import {FormsModule} from "@angular/forms";
 import { VideoBoxComponent } from './video-box/video-box.component';
 import { OpenProductAdditionalComponent } from './open-product-additional/open-product-additional.component';
+import { OpenProductSimilarComponent } from './open-product-similar/open-product-similar.component';
+import {SharedModule} from "../../shared/shared.module";
 
 @NgModule({
     declarations: [
-        OpenProductComponent,
         OpenProductBreadcrumbComponent,
         OpenProductGalleryComponent,
         OpenProductInfoComponent,
         VideoBoxComponent,
-        OpenProductAdditionalComponent
+        OpenProductAdditionalComponent,
+        OpenProductSimilarComponent,
+        OpenProductComponent
     ],
     imports: [
         CommonModule,
         RouterModule,
         NgOptimizedImage,
         HomeModule,
-        FormsModule
+        FormsModule,
+        SharedModule,
     ],
     exports: [
-        OpenProductComponent
+        VideoBoxComponent,
+        OpenProductAdditionalComponent,
+        OpenProductSimilarComponent
     ]
 })
 export class OpenProductModule {}

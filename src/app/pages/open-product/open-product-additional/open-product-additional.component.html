@@ -1,4 +1,4 @@
-<ng-container *ngIf="product; else skeletonLoader">
+<ng-container *ngIf="product">
     <div class="product-detail__additional">
         <div class="product-detail__additional__tabs">
             <button
@@ -48,14 +48,14 @@
                 [class.product-detail__additional__tab-content--active]="activeTab === 'guide'"
                 id="guide"
         >
-            <p *ngIf="product.manual; else guideEmpty">
-                {{ product.manual }}
-            </p>
-            <ng-template #guideEmpty>
+            <ng-container *ngIf="product.manual">
+                <p>{{ product.manual }}</p>
+            </ng-container>
+            <ng-container *ngIf="!product.manual">
                 <p class="product-detail__additional__tab-content__paragraph">
                     Uputstvo nije dostupno.
                 </p>
-            </ng-template>
+            </ng-container>
         </div>
 
         <div
@@ -63,14 +63,14 @@
                 [class.product-detail__additional__tab-content--active]="activeTab === 'rating'"
                 id="rating"
         >
-            <p *ngIf="product.rating; else ratingEmpty">
-                Ocjena: {{ product.rating }} / 5
-            </p>
-            <ng-template #ratingEmpty>
+            <ng-container *ngIf="product.rating">
+                <p>Ocjena: {{ product.rating }} / 5</p>
+            </ng-container>
+            <ng-container *ngIf="!product.rating">
                 <p class="product-detail__additional__tab-content__paragraph">
                     Nema ocjena za ovaj proizvod.
                 </p>
-            </ng-template>
+            </ng-container>
         </div>
 
         <div
@@ -86,7 +86,7 @@
     </div>
 </ng-container>
 
-<ng-template #skeletonLoader>
+<ng-container *ngIf="!product">
     <div class="product-detail__additional">
         <div class="product-detail__additional__tabs">
             <span class="skeleton-text skeleton-text--medium"></span>
@@ -97,10 +97,10 @@
         <div class="product-detail__additional__tab-content product-detail__additional__tab-content--active">
             <div class="additional-skeleton__content">
                 <span class="skeleton-text skeleton--window" style="height: 1.5rem; width: 50%;"></span>
-                <span class="skeleton-text skeleton--window" style="height: 1rem;   width: 30%;"></span>
-                <span class="skeleton-text skeleton--window" style="height: 1rem;   width: 40%;"></span>
-                <span class="skeleton-text skeleton--window" style="height: 1rem;   width: 60%;"></span>
+                <span class="skeleton-text skeleton--window" style="height: 1rem; width: 30%;"></span>
+                <span class="skeleton-text skeleton--window" style="height: 1rem; width: 40%;"></span>
+                <span class="skeleton-text skeleton--window" style="height: 1rem; width: 60%;"></span>
             </div>
         </div>
     </div>
-</ng-template>
+</ng-container>

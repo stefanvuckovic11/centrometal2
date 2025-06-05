@@ -1,11 +1,8 @@
-<ng-container *ngIf="product?.title; else breadcrumbSkeleton">
+<ng-container *ngIf="product?.title">
     <nav class="product-detail__breadcrumb">
         <ul class="product-detail__breadcrumb__list">
             <li class="product-detail__breadcrumb__list-item product-detail__breadcrumb__list-item--home">
-                <a
-                        class="product-detail__breadcrumb__list-item-link"
-                        routerLink="/"
-                >
+                <a class="product-detail__breadcrumb__list-item-link" routerLink="/">
           <span class="product-detail__breadcrumb__list-item-link-text">
             Home &gt;
           </span>
@@ -30,7 +27,7 @@
     </nav>
 </ng-container>
 
-<ng-template #breadcrumbSkeleton>
+<ng-container *ngIf="!product?.title">
     <nav class="product-detail__breadcrumb">
         <ul class="product-detail__breadcrumb__list">
             <li class="product-detail__breadcrumb__list-item">
@@ -44,4 +41,4 @@
             </li>
         </ul>
     </nav>
-</ng-template>
+</ng-container>

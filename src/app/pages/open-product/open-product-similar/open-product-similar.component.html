@@ -1,0 +1,29 @@
+<div class="product-detail__similar-products" *ngIf="similarProducts.length > 0">
+    <div class="product-detail__similar-products__heading">
+    <span class="product-detail__similar-products__heading__text">
+      {{ similarConfig.headerText || 'Slični proizvodi' }}
+    </span>
+    </div>
+
+    <div class="product-detail__similar-products__list">
+        <ng-container *ngFor="let item of similarProducts">
+            <a
+                    [routerLink]="['/products', item.id]"
+                    class="product-detail__similar-products__list__similar-product"
+            >
+                <app-product-card [product]="item"></app-product-card>
+            </a>
+        </ng-container>
+    </div>
+
+    <div class="product-detail__similar-products__footer">
+        <a
+                [routerLink]="['/see-all']"
+                [queryParams]="{ type: productType }"
+                class="product-detail__similar-products__footer__button"
+                [style.border-color]="similarConfig.buttonBorderColor || '#ccc'"
+        >
+            {{ similarConfig.footerButtonText || 'Pogledaj sve' }}
+        </a>
+    </div>
+</div>

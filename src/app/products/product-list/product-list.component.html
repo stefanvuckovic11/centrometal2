@@ -9,7 +9,7 @@
 </div>
 
 <ng-container *ngIf="!loading">
-    <ng-container *ngIf="productsByCategory && sections?.length; else noCategories">
+    <ng-container *ngIf="productsByCategory && sections?.length">
         <div class="product-list">
             <ng-container *ngFor="let section of sections; let first = first; let last = last">
                 <section
@@ -25,7 +25,7 @@
             </span>
                     </div>
 
-                    <ng-container *ngIf="productsByCategory[section.key]?.length; else noProducts">
+                    <ng-container *ngIf="productsByCategory[section.key]?.length">
                         <div class="product-list__category__list">
                             <ng-container
                                     *ngFor="
@@ -39,12 +39,11 @@
                             </ng-container>
                         </div>
                     </ng-container>
-
-                    <ng-template #noProducts>
+                    <ng-container *ngIf="!productsByCategory[section.key]?.length">
                         <p class="product-list__category__empty">
                             Nema dostupnih proizvoda u ovoj kategoriji.
                         </p>
-                    </ng-template>
+                    </ng-container>
 
                     <div class="product-list__category__footer">
                         <a
@@ -60,7 +59,7 @@
         </div>
     </ng-container>
 
-    <ng-template #noCategories>
+    <ng-container *ngIf="!productsByCategory || !sections?.length">
         <p class="product-list__empty-all">Trenutno nema dostupnih proizvoda.</p>
-    </ng-template>
+    </ng-container>
 </ng-container>
