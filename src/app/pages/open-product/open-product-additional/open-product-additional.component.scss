@@ -1,0 +1,57 @@
+@import '../../../../styles/animations';
+
+.product-detail__additional {
+  width: 100%;
+  background: #fff;
+  padding-top: 20px;
+
+  &__tabs {
+    display: flex;
+
+    &__tab {
+      background: none;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+
+      &--active {
+        background: #00aaff;
+        color: #fff;
+      }
+    }
+  }
+
+  &__tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.38);
+
+    &--active {
+      display: block;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &__item {
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #333;
+      }
+    }
+
+    &__paragraph {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #333;
+    }
+  }
+}
+
+
+
+

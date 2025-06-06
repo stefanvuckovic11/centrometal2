@@ -1,14 +1,9 @@
-<ng-container *ngIf="product?.title; else breadcrumbSkeleton">
+<ng-container *ngIf="product?.title">
     <nav class="product-detail__breadcrumb">
         <ul class="product-detail__breadcrumb__list">
             <li class="product-detail__breadcrumb__list-item product-detail__breadcrumb__list-item--home">
-                <a
-                        class="product-detail__breadcrumb__list-item-link"
-                        routerLink="/"
-                >
-          <span class="product-detail__breadcrumb__list-item-link-text">
-            Home &gt;
-          </span>
+                <a class="product-detail__breadcrumb__list-item-link" routerLink="/">
+                    <span class="product-detail__breadcrumb__list-item-link-text">Home &gt;</span>
                 </a>
             </li>
             <li class="product-detail__breadcrumb__list-item">
@@ -16,22 +11,18 @@
                         class="product-detail__breadcrumb__list-item-link product-detail__breadcrumb__list-item-link--category"
                         [routerLink]="['/category', product.category]"
                 >
-          <span class="product-detail__breadcrumb__list-item-link-text">
-            {{ product.category }} &gt;
-          </span>
+                    <span class="product-detail__breadcrumb__list-item-link-text">{{ product.category }} &gt;</span>
                 </a>
             </li>
             <li class="product-detail__breadcrumb__list-item product-detail__breadcrumb__list-item--current">
-        <span class="product-detail__breadcrumb__list-item-link-text">
-          {{ product.title }}
-        </span>
+                <span class="product-detail__breadcrumb__list-item-link-text">{{ product.title }}</span>
             </li>
         </ul>
     </nav>
 </ng-container>
 
-<ng-template #breadcrumbSkeleton>
-    <nav class="product-detail__breadcrumb">
+<ng-container *ngIf="!product?.title">
+    <nav class="product-detail__breadcrumb breadcrumb--skeleton">
         <ul class="product-detail__breadcrumb__list">
             <li class="product-detail__breadcrumb__list-item">
                 <span class="skeleton-text skeleton-text--short"></span>
@@ -44,4 +35,4 @@
             </li>
         </ul>
     </nav>
-</ng-template>
+</ng-container>
