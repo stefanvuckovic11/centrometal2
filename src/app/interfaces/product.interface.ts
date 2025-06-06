@@ -1,9 +1,9 @@
 export enum ProductCategory {
-    HotOffer      = 'hotOffer',
-    Action        = 'action',
-    Recommended   = 'recommended',
-    New           = 'new',
-    Sale          = 'sale'
+    HotOffer = 'hotOffer',
+    Action = 'action',
+    Recommended = 'recommended',
+    New = 'new',
+    Sale = 'sale'
 }
 
 export interface Price {
@@ -31,13 +31,6 @@ export interface ProductInterface {
     reviews?: any[];
     relatedProducts?: number[];
     tabs?: any;
-
-    similarProducts?: ProductInterface[];
-    similarConfig?: {
-        headerText?: string;
-        footerButtonText?: string;
-        buttonBorderColor?: string;
-    };
 }
 
 export interface ProductsByCategory {

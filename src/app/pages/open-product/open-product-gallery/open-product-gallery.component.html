@@ -1,4 +1,4 @@
-<ng-container *ngIf="images?.length">
+<ng-container *ngIf="images?.length; else gallerySkeleton">
     <div class="product-detail__gallery__slider">
         <div class="product-detail__gallery__slider__track">
             <ng-container *ngFor="let img of images; let i = index">
@@ -16,12 +16,15 @@
                 </div>
             </ng-container>
         </div>
+
         <div class="product-detail__gallery__slider__thumbnails">
             <button
-                    class="product-detail__gallery__slider__thumbnails-arrow product-detail__gallery__slider__thumbnails-arrow--prev"
+                    class="product-detail__gallery__slider__thumbnails-arrow
+               product-detail__gallery__slider__thumbnails-arrow--prev"
                     aria-label="Previous slide"
                     (click)="prev()"
             >&lt;</button>
+
             <ng-container *ngFor="let img of images; let i = index">
                 <div
                     #thumbItem
@@ -35,8 +38,10 @@
                     />
                 </div>
             </ng-container>
+
             <button
-                    class="product-detail__gallery__slider__thumbnails-arrow product-detail__gallery__slider__thumbnails-arrow--next"
+                    class="product-detail__gallery__slider__thumbnails-arrow
+               product-detail__gallery__slider__thumbnails-arrow--next"
                     aria-label="Next slide"
                     (click)="next()"
             >&gt;</button>
@@ -44,7 +49,7 @@
     </div>
 </ng-container>
 
-<ng-container *ngIf="!images?.length">
+<ng-template #gallerySkeleton>
     <div class="product-detail__gallery__slider">
         <div class="product-detail__gallery__slider__track">
             <div class="product-detail__gallery__slider__track-slide">
@@ -65,4 +70,4 @@
             </ng-container>
         </div>
     </div>
-</ng-container>
+</ng-template>

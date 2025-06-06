@@ -1,6 +1,6 @@
 <div class="video-box">
     <div class="video-box__wrapper">
-        <ng-container *ngIf="!isPlaying">
+        <ng-container *ngIf="!isPlaying; else showVideo">
             <img
                     class="video-box__thumbnail"
                     [src]="thumbnail"
@@ -11,7 +11,8 @@
                     (click)="playVideo()"
             ></div>
         </ng-container>
-        <ng-container *ngIf="isPlaying">
+
+        <ng-template #showVideo>
             <video
                 #videoPlayer
                 class="video-box__content"
@@ -20,6 +21,6 @@
                 muted
                 (click)="stopVideo()"
             ></video>
-        </ng-container>
+        </ng-template>
     </div>
 </div>

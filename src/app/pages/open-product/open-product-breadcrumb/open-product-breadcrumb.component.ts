@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ProductInterface } from '../../../interfaces/product.interface';
 
 @Component({
   selector: 'app-open-product-breadcrumb',
-  standalone: false,
   templateUrl: './open-product-breadcrumb.component.html',
-  styleUrls: ['./open-product-breadcrumb.component.scss']
+  styleUrls: ['./open-product-breadcrumb.component.scss'],
+  standalone: false
 })
 export class OpenProductBreadcrumbComponent {
-  @Input() product: any = null;
+  @Input() product!: ProductInterface;
 }

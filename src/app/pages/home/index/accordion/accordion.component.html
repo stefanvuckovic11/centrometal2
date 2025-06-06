@@ -7,12 +7,17 @@
     </div>
 
     <ng-container
-            *ngTemplateOutlet="recursiveList; context: { items: items, level: 0 }"
+            *ngTemplateOutlet="
+      recursiveList;
+      context: { items: items, level: 0 }
+    "
     ></ng-container>
 
     <ng-template #recursiveList let-items="items" let-level="level">
         <ng-container *ngFor="let item of items">
-            <div class="index__left__accordion__item">
+            <div
+                    class="index__left__accordion__item"
+            >
                 <ng-container *ngIf="item.link; else expandedCase">
                     <a
                             [routerLink]="item.link"
