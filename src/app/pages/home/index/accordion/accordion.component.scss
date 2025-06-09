@@ -1,4 +1,4 @@
-@import "../../../../../styles/variables";
+@use "../../../../../styles/variables";
 
 
 .index{
@@ -14,7 +14,7 @@
       border-radius: 3px;
 
       &__header {
-        background: $navbar-dark-blue;
+        background: variables.$navbar-dark-blue;
         color: white;
         font-size: 18px;
         font-weight: bold;
@@ -85,7 +85,7 @@
         }
 
         &:hover {
-          background-color: $cyan-hover;
+          background-color: variables.$cyan-hover;
         }
       }
     }
@@ -102,7 +102,7 @@
   .index__left__accordion__header {
     width: 100%;
     margin: 0;
-    background: $general-cyan;
+    background: variables.$general-cyan;
     padding: 15px;
     position: relative;
     z-index: 1;
@@ -120,13 +120,13 @@
 
   .index__left__accordion__title {
     color: white;
-    background-color: $general-cyan;
+    background-color: variables.$general-cyan;
     font-size: 18px;
   }
 
   .index__left__accordion__list-item {
     font-size: 16px;
     color: white;
-    background-color: $general-cyan;
+    background-color: variables.$general-cyan;
   }
 }

@@ -1,4 +1,4 @@
-@import '../../../styles/_variables.scss';
+@use '../../../styles/_variables.scss';
 
 .product-list {
   width: 100%;
@@ -20,11 +20,11 @@
 
     &--first,
     &__header {
-      border-bottom-color: $navbar-dark-blue;
+      border-bottom-color: variables.$navbar-dark-blue;
     }
 
     &--last &__header {
-      border-bottom-color: $general-gold;
+      border-bottom-color: variables.$general-gold;
     }
 
     &__header {
@@ -34,7 +34,7 @@
       height: 0;
       border-left: 25px solid transparent;
       border-right: 25px solid transparent;
-      border-bottom: 50px solid $general-cyan;
+      border-bottom: 50px solid variables.$general-cyan;
       transform: rotateX(180deg);
       z-index: -1;
     }
@@ -54,7 +54,7 @@
       grid-template-columns: repeat(4, 1fr);
       justify-items: center;
       justify-content: center;
-      gap: $product-card-gap;
+      gap: variables.$product-card-gap;
 
       &__card {
         position: relative;
@@ -135,7 +135,7 @@
           }
 
           &-new {
-            color: $general-cyan;
+            color: variables.$general-cyan;
           }
         }
       }
@@ -149,7 +149,7 @@
 
       &__button {
         padding: 0.75rem 2rem;
-        border: 2px solid $general-cyan;
+        border: 2px solid variables.$general-cyan;
         background-color: transparent;
         color: #000;
         font-weight: 600;
@@ -161,7 +161,7 @@
         transition: background-color 0.3s;
 
         &:hover {
-          background-color: rgba($general-cyan, 0.2);
+          background-color: rgba(variables.$general-cyan, 0.2);
         }
       }
     }
@@ -169,7 +169,7 @@
 }
 
 // Responsive
-@media (max-width: $breakpoint-md) {
+@media (max-width: variables.$breakpoint-md) {
   .product-list {
     &__category {
       &__list {
@@ -179,7 +179,7 @@
   }
 }
 
-@media (max-width: $breakpoint-sm) {
+@media (max-width: variables.$breakpoint-sm) {
   .product-list {
     &__category {
       &__list {

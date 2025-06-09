@@ -1,5 +1,5 @@
-@import '../../../../styles/animations';
-@import '../../../../styles/variables';
+@use '../../../../styles/animations';
+@use '../../../../styles/variables';
 
 .product-detail {
   &__info {
@@ -20,7 +20,7 @@
 
       &__price {
         font-size: 30px;
-        color: $general-cyan;
+        color: variables.$general-cyan;
         border-right: 1px solid #ccc;
         padding-right: 0.75rem;
         margin-right: 3px;
@@ -32,7 +32,7 @@
 
         &__number {
           font-size: 20px;
-          color: $general-cyan;
+          color: variables.$general-cyan;
           font-weight: lighter;
         }
       }
@@ -125,7 +125,7 @@
           }
 
           &__view__btn {
-            background: $general-cyan;
+            background: variables.$general-cyan;
             color: white;
           }
         }

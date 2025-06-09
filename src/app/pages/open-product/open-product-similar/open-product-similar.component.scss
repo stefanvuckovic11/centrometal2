@@ -1,5 +1,5 @@
-@import '../../../../styles/variables';
-@import '../../../../styles/animations';
+@use '../../../../styles/variables';
+@use '../../../../styles/animations';
 
 .product-detail__similar-products {
   width: 100%;
@@ -33,7 +33,7 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: $product-card-gap;
+    gap: variables.$product-card-gap;
     justify-items: center;
     justify-content: center;
 
@@ -62,7 +62,7 @@
 
     &__button {
       padding: 0.75rem 2rem;
-      border: 2px solid $general-cyan;
+      border: 2px solid variables.$general-cyan;
       background-color: transparent;
       color: #000;
       font-weight: 600;
@@ -73,13 +73,13 @@
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: rgba($general-cyan, 0.2);
+        background-color: rgba(variables.$general-cyan, 0.2);
       }
     }
   }
 }
 
-@media (max-width: $breakpoint-md) {
+@media (max-width: variables.$breakpoint-md) {
   .product-detail__similar-products {
     &__list {
       grid-template-columns: repeat(2, 1fr);
@@ -87,7 +87,7 @@
   }
 }
 
-@media (max-width: $breakpoint-sm) {
+@media (max-width: variables.$breakpoint-sm) {
   .product-detail__similar-products {
     &__list {
       grid-template-columns: 1fr;
