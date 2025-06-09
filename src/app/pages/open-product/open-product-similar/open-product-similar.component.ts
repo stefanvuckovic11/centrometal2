@@ -1,14 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { ProductInterface } from '../../../interfaces/product.interface';
-import {SharedModule} from "../../../shared/shared.module";
 
 @Component({
   selector: 'app-open-product-similar',
   templateUrl: './open-product-similar.component.html',
-  imports: [
-    SharedModule
-  ],
-  styleUrls: ['./open-product-similar.component.scss']
+  styleUrls: ['./open-product-similar.component.scss'],
+  standalone: false
 })
 export class OpenProductSimilarComponent {
   @Input() similarProducts: ProductInterface[] = [];

@@ -23,10 +23,9 @@ const routes: Routes = [
         import('./pages/see-all/see-all.module').then(m => m.SeeAllModule)
   },
   {
-    path: 'product/:id',
+    path: 'product',
     loadChildren: () =>
-        import('./pages/open-product/open-product.module')
-            .then(m => m.OpenProductModule)
+        import('./pages/open-product/open-product.module').then(m => m.OpenProductModule)
   },
   {
     path: '**',

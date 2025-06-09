@@ -1,36 +1,18 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../products/products.service';
 import { ProductInterface } from '../../interfaces/product.interface';
 import { Subject, takeUntil, switchMap, take, of } from 'rxjs';
-import { SharedModule } from '../../shared/shared.module';
-import { OpenProductBreadcrumbComponent } from './open-product-breadcrumb/open-product-breadcrumb.component';
-import { OpenProductGalleryComponent } from './open-product-gallery/open-product-gallery.component';
-import { OpenProductInfoComponent } from './open-product-info/open-product-info.component';
-import { OpenProductAdditionalComponent } from './open-product-additional/open-product-additional.component';
-import { OpenProductSimilarComponent } from './open-product-similar/open-product-similar.component';
-import { VideoBoxComponent } from './video-box/video-box.component';
 
 @Component({
     selector: 'app-open-product',
-    standalone: true,
-    imports: [
-        CommonModule,
-        SharedModule,
-        OpenProductBreadcrumbComponent,
-        OpenProductGalleryComponent,
-        OpenProductInfoComponent,
-        OpenProductAdditionalComponent,
-        OpenProductSimilarComponent,
-        VideoBoxComponent
-    ],
     templateUrl: './open-product.component.html',
-    styleUrls: ['./open-product.component.scss']
+    styleUrls: ['./open-product.component.scss'],
+    standalone: false
 })
 export class OpenProductComponent implements OnInit, OnDestroy {
     public product?: ProductInterface;
-    public isLoading = true;
+    public isLoading: boolean = true;
     public error?: string;
 
     private destroy$ = new Subject<void>();

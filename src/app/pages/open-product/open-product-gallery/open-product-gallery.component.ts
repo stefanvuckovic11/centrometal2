@@ -1,15 +1,11 @@
 import { Component, Input, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
-import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-open-product-gallery',
   templateUrl: './open-product-gallery.component.html',
-  imports: [
-    NgOptimizedImage,
-    NgForOf,
-    NgIf
-  ],
-  styleUrls: ['./open-product-gallery.component.scss']
+  styleUrls: ['./open-product-gallery.component.scss'],
+  standalone: false
+
 })
 export class OpenProductGalleryComponent implements AfterViewInit {
   @Input() public images: string[] = [];

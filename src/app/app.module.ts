@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import {OpenProductComponent} from "./pages/open-product/open-product.component";
+import {OpenProductModule} from "./pages/open-product/open-product.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { SharedModule } from './shared/shared.module';
     CommonModule,
     RouterModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+      OpenProductModule
   ],
   providers: [
     provideHttpClient()
