@@ -1,11 +1,15 @@
 import { Component, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {RouterLink, RouterModule} from '@angular/router';
+import {NgIf} from "@angular/common";
 
 @Component({
-  selector: 'app-open-product-breadcrumb',
-  standalone: false,
-  templateUrl: './open-product-breadcrumb.component.html',
-  styleUrls: ['./open-product-breadcrumb.component.scss']
+    selector: 'app-open-product-breadcrumb',
+    templateUrl: './open-product-breadcrumb.component.html',
+    imports: [
+        RouterLink,
+        NgIf
+    ],
+    styleUrls: ['./open-product-breadcrumb.component.scss']
 })
 export class OpenProductBreadcrumbComponent {
   @Input() product: any = null;

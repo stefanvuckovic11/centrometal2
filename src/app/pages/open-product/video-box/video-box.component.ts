@@ -5,12 +5,15 @@ import {
   ElementRef,
   AfterViewInit
 } from '@angular/core';
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-video-box',
   templateUrl: './video-box.component.html',
-  styleUrls: ['./video-box.component.scss'],
-  standalone: false
+  imports: [
+    NgIf
+  ],
+  styleUrls: ['./video-box.component.scss']
 })
 export class VideoBoxComponent implements AfterViewInit {
   @Input() thumbnail!: string;

@@ -1,10 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {NgIf} from "@angular/common";
 
 @Component({
-  selector: 'app-open-product-additional',
-  templateUrl: './open-product-additional.component.html',
-  styleUrls: ['./open-product-additional.component.scss'],
-  standalone: false
+    selector: 'app-open-product-additional',
+    templateUrl: './open-product-additional.component.html',
+    imports: [
+        NgIf
+    ],
+    styleUrls: ['./open-product-additional.component.scss']
 })
 export class OpenProductAdditionalComponent implements OnInit {
   @Input() product: any;
