@@ -45,6 +45,28 @@
   border-radius: 8px;
 }
 
+.skeleton--full {
+  @extend .skeleton-text;
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+.skeleton--thumb {
+  @extend .skeleton-text;
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+
+.skeleton--card {
+  @extend .skeleton-text;
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 0.5rem;
+}
+
 .see-all {
   &__grid {
     &__skeleton-card {
@@ -98,35 +120,11 @@
 .product-detail {
   &__gallery {
     &__slider {
-      &__track {
-        &__track-slide {
-          span.skeleton--window {
-            display: block;
-            width: 100%;
-            height: 400px;
-          }
-        }
-      }
-
+      &__track,
       &__thumbnails {
-        &-item {
-          span.skeleton--window {
-            width: 80px;
-            height: 80px;
-          }
-        }
       }
     }
   }
-}
-
-.skeleton-text--medium {
-  width: 80px;
-  height: 1.2rem;
-}
-
-.skeleton--window {
-  border-radius: 8px;
 }
 
 .additional-skeleton__content {
