@@ -1,1 +1,108 @@
-<p>register works!</p>
+<div class="register-page">
+    <div class="register-page__container">
+        <h1 class="register-page__title">Registracija</h1>
+
+        <form
+                class="register-page__form"
+                [formGroup]="registerForm"
+                (ngSubmit)="onSubmit()"
+        >
+            <div class="register-page__form-group">
+                <label class="register-page__form-label">Korisničko ime</label>
+                <input
+                        class="register-page__form-input"
+                        type="text"
+                        formControlName="username"
+                />
+                <div
+                        *ngIf="username?.invalid && username?.dirty"
+                        class="register-page__form-error-text"
+                >
+                    <small *ngIf="username?.hasError('required')"
+                    >Polje je obavezno.</small
+                    >
+                    <small *ngIf="username?.hasError('minlength')"
+                    >Najmanje 3 karaktera.</small
+                    >
+                </div>
+            </div>
+
+            <div class="register-page__form-group">
+                <label class="register-page__form-label">Email</label>
+                <input
+                        class="register-page__form-input"
+                        type="email"
+                        formControlName="email"
+                />
+                <div
+                        *ngIf="email?.invalid && email?.dirty"
+                        class="register-page__form-error-text"
+                >
+                    <small *ngIf="email?.hasError('required')"
+                    >Polje je obavezno.</small
+                    >
+                    <small *ngIf="email?.hasError('email')">Neispravan email.</small>
+                </div>
+            </div>
+
+            <div class="register-page__form-group">
+                <label class="register-page__form-label">Lozinka</label>
+                <input
+                        class="register-page__form-input"
+                        type="password"
+                        formControlName="password"
+                />
+                <div
+                        *ngIf="password?.invalid && password?.dirty"
+                        class="register-page__form-error-text"
+                >
+                    <small *ngIf="password?.hasError('required')"
+                    >Polje je obavezno.</small
+                    >
+                    <small *ngIf="password?.hasError('minlength')"
+                    >Najmanje 5 karaktera.</small
+                    >
+                </div>
+            </div>
+
+            <div class="register-page__form-group">
+                <label class="register-page__form-label">Potvrdi lozinku</label>
+                <input
+                        class="register-page__form-input"
+                        type="password"
+                        formControlName="confirmPassword"
+                />
+                <div
+                        *ngIf="
+            registerForm?.hasError('mismatch') && confirmPassword?.dirty
+          "
+                        class="register-page__form-error-text"
+                >
+                    <small>Lozinke se ne poklapaju.</small>
+                </div>
+            </div>
+
+            <div
+                    *ngIf="errorMsg"
+                    class="register-page__form-error-text register-page__form-error-global"
+            >
+                {{ errorMsg }}
+            </div>
+
+            <button
+                    class="register-page__form-button"
+                    type="submit"
+                    [disabled]="registerForm.invalid || isLoading"
+            >
+                {{ isLoading ? 'Učitavanje...' : 'Registruj se' }}
+            </button>
+        </form>
+
+        <p class="register-page__login-text">
+            Već imaš nalog?
+            <a class="register-page__login-link" routerLink="/auth/login"
+            >Prijavi se</a
+            >
+        </p>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import {BehaviorSubject, Observable, of, throwError} from 'rxjs';
 import { map, tap, catchError } from 'rxjs/operators';
 
 export interface User {
@@ -56,9 +56,29 @@ export class AuthService {
         );
     }
 
+
+
     logout(): void {
         localStorage.removeItem('loggedInUser');
         this.currentUserSubject.next(null);
     }
 
+
+    register(username: string, email: string, password: string): Observable<User> {
+        const newUser = { username, email, password };
+        return this.http.post<User>(this.baseUrl, newUser).pipe(
+            map(u => ({
+                id: u.id,
+                username: u.username,
+                email: u.email,
+                privilege: u.privilege
+            })),
+            catchError(err => {
+                console.error('AuthService.register error:', err);
+                return throwError(err);
+            })
+        );
+    }
 }
+
+
