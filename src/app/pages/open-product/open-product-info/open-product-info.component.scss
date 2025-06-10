@@ -193,3 +193,19 @@
     }
   }
 }
+
+@media screen and (max-width: 370px) {
+  .product-detail{
+    &__info{
+      &__slider-cart{
+        &__cart{
+          &__upper{
+            &__share{
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+}
