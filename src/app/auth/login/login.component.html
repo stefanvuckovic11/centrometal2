@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="login-page">
+    <div class="login-page__container">
+        <h1 class="login-page__title">Prijava</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-page__form">
+            <div class="login-page__form-group">
+                <label for="login-username" class="login-page__form-label">Korisničko ime ili Email</label>
+                <input id="login-username" type="text" formControlName="loginInput" class="login-page__form-input" />
+                <div *ngIf="loginInput?.invalid && (loginForm.get('loginInput')?.dirty || loginForm.get('loginInput')?.touched)" class="login-page__error">
+                    <div *ngIf="loginInput?.hasError('required')">Polje je obavezno.</div>
+                    <div *ngIf="loginInput?.hasError('minlength')">Unesite najmanje 3 karaktera.</div>
+                </div>
+            </div>
+            <div class="login-page__form-group">
+                <label for="login-password" class="login-page__form-label">Lozinka</label>
+                <input id="login-password" type="password" formControlName="password" class="login-page__form-input" />
+                <div *ngIf="password?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" class="login-page__error">
+                    <div *ngIf="password?.hasError('required')">Lozinka je obavezna.</div>
+                    <div *ngIf="password?.hasError('minlength')">Lozinka mora imati najmanje 6 karaktera.</div>
+                </div>
+            </div>
+            <div *ngIf="errorMsg" class="login-page__error">{{ errorMsg }}</div>
+            <button type="submit" class="login-page__form-button" [disabled]="loginForm.invalid || isLoading">
+                {{ isLoading ? 'Učitavanje...' : 'Prijavi se' }}
+            </button>
+        </form>
+        <p class="login-page__register-link">
+            Nemaš nalog?
+            <a routerLink="/auth/register" class="login-page__register-link--anchor">Registruj se</a>
+        </p>
+    </div>
+</div>

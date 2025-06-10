@@ -1,19 +1,25 @@
 <nav class="navbar">
   <div class="navbar__container">
-    <div class="navbar__top">
-      <div class="navbar__top__languages">
-        <a routerLink="" class="navbar__top__languages__link">Engleski</a>
-        <a routerLink="" class="navbar__top__languages__link">Crnogorski</a>
-        <p class="navbar__top__languages__info">
-          Svakog dana od 8:00 do 21:00 h, osim nedjeljom | Tel: +382 20 656 772
-        </p>
+      <div class="navbar__top">
+          <div class="navbar__top__languages">
+              <a routerLink="" class="navbar__top__languages__link">Engleski</a>
+              <a routerLink="" class="navbar__top__languages__link">Crnogorski</a>
+              <p class="navbar__top__languages__info">
+                  Svakog dana od 8:00 do 21:00 h, osim nedjeljom | Tel: +382 20 656 772
+              </p>
+          </div>
+          <div class="navbar__top__account">
+              <a routerLink="/support" class="navbar__top__account__link">On-line podrška</a>
+              <ng-container *ngIf="!(currentUser$ | async)">
+                  <a routerLink="/auth/register" class="navbar__top__account__link">Registracija</a>
+                  <a routerLink="/auth/login" class="navbar__top__account__link">Prijava</a>
+              </ng-container>
+              <ng-container *ngIf="(currentUser$ | async) as currentUser">
+                  <span class="navbar__top__account__user">Pozdrav, {{ currentUser.username }}</span>
+                  <button (click)="onLogout()" class="navbar__top__account__link">Odjavi se</button>
+              </ng-container>
+          </div>
       </div>
-      <div class="navbar__top__account">
-        <a routerLink="/support" class="navbar__top__account__link">On-line podrška</a>
-        <a routerLink="/register" class="navbar__top__account__link">Registracija</a>
-        <a routerLink="/login" class="navbar__top__account__link">Prijava</a>
-      </div>
-    </div>
     <div class="navbar__middle">
       <div class="navbar__middle__logo">
         <p class="navbar__middle__logo__text" id="centrometal-text">
