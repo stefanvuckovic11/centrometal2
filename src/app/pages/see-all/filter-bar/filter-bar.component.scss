@@ -1,4 +1,4 @@
-@import '../../../../styles/_variables.scss';
+@use '../../../../styles/_variables.scss';
 
 .filter-bar {
   display: flex;
@@ -35,7 +35,7 @@
   &__button {
     flex: 0 0 auto;
     padding: 0.4rem 0.8rem;
-    background-color: $general-cyan;
+    background-color: variables.$general-cyan;
     color: #fff;
     border: none;
     border-radius: 4px;

@@ -10,11 +10,8 @@ import {SharedModule} from "../../shared/shared.module";
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  imports: [
-    NgClass,
-    SharedModule
-  ],
-  styleUrls: ['./product-list.component.scss']
+  styleUrls: ['./product-list.component.scss'],
+  standalone:false
 })
 export class ProductListComponent implements OnInit {
   public productsByCategory: { [category: string]: ProductInterface[] } = {};

@@ -5,6 +5,7 @@ import { Component, Input, AfterViewInit, ElementRef, ViewChildren, QueryList } 
   templateUrl: './open-product-gallery.component.html',
   styleUrls: ['./open-product-gallery.component.scss'],
   standalone: false
+
 })
 export class OpenProductGalleryComponent implements AfterViewInit {
   @Input() public images: string[] = [];

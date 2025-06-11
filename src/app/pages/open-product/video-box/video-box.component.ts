@@ -1,10 +1,4 @@
-import {
-  Component,
-  Input,
-  ViewChild,
-  ElementRef,
-  AfterViewInit
-} from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-video-box',
@@ -16,22 +10,18 @@ export class VideoBoxComponent implements AfterViewInit {
   @Input() thumbnail!: string;
   @Input() videoSrc!: string;
 
-  isPlaying = false;
+  public isPlaying: boolean = false;
 
-  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
+  @ViewChild('videoPlayer') private videoPlayer!: ElementRef<HTMLVideoElement>;
 
-  ngAfterViewInit() {
+  public ngAfterViewInit(): void {}
 
-  }
-
-  playVideo() {
+  public playVideo(): void {
     this.isPlaying = true;
-    setTimeout(() => {
-      this.videoPlayer.nativeElement.play();
-    });
+    setTimeout(() => this.videoPlayer.nativeElement.play());
   }
 
-  stopVideo() {
+  public stopVideo(): void {
     const vid = this.videoPlayer.nativeElement;
     vid.pause();
     vid.currentTime = 0;

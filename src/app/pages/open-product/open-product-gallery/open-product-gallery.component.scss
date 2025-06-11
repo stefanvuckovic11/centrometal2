@@ -1,4 +1,4 @@
-@import '../../../../styles/variables';
+@use '../../../../styles/variables';
 
 .product-detail {
   &__gallery {
@@ -56,7 +56,7 @@
           cursor: pointer;
 
           &--active {
-            border-color: $general-cyan;
+            border-color: variables.$general-cyan;
           }
 
           &-img {

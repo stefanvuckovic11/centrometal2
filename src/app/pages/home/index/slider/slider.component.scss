@@ -1,4 +1,5 @@
-@import "../../../../../styles/variables";
+@use "sass:color";
+@use "../../../../../styles/variables";
 
 .slider {
   position: relative;
@@ -53,7 +54,7 @@
     display: inline-block;
     margin-top: 20px;
     padding: 12px 20px;
-    background-color: $general-cyan;
+    background-color: variables.$general-cyan;
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
@@ -61,7 +62,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: darken($general-cyan, 5%);
+      background-color: color.adjust(variables.$general-cyan, $lightness: -5%);
     }
   }
 
@@ -88,7 +89,7 @@
       user-select: none;
 
       &--active {
-        background-color: $general-cyan;
+        background-color: variables.$general-cyan;
         color: #fff;
       }
     }

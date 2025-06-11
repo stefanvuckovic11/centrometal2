@@ -1,5 +1,5 @@
-@import '../../../styles/animations';
-@import '../../../styles/variables';
+@use '../../../styles/animations';
+@use '../../../styles/variables';
 
 .product-detail {
   margin-top: 2%;
@@ -63,7 +63,7 @@
 
       &--current {
         font-weight: bold;
-        color: $general-cyan;
+        color: variables.$general-cyan;
       }
     }
 
