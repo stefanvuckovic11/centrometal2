@@ -52,6 +52,21 @@
   }
 }
 
+@media screen and (max-width: 465px) {
+  .product-detail__additional{
+    &__tabs{
+      flex-direction: column;
+      border: 1px rgba(197, 188, 188, 0.54) solid;
+      border-bottom: none;
+      &__tab{
+        border: 1px rgba(197, 188, 188, 0.54) solid;
+
+      }
+    }
+  }
+}
+
+
 
 
 

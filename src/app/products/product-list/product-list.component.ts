@@ -1,23 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
 import { ProductService } from '../products.service';
-import { ProductInterface, ProductCategory } from '../../interfaces/product.interface';
+import { ProductsByCategory, ProductCategory } from '../../interfaces/product.interface';
 import { Section } from './section';
 import { SectionService } from './section.service';
-import {NgClass} from "@angular/common";
-import {SharedModule} from "../../shared/shared.module";
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  imports: [
-    NgClass,
-    SharedModule
-  ],
-  styleUrls: ['./product-list.component.scss']
+  styleUrls: ['./product-list.component.scss'],
+  standalone: false
 })
 export class ProductListComponent implements OnInit {
-  public productsByCategory: { [category: string]: ProductInterface[] } = {};
+  public productsByCategory: ProductsByCategory = {};
   public sections: Section[] = [];
   public loading: boolean = true;
 
@@ -28,22 +23,22 @@ export class ProductListComponent implements OnInit {
       private sectionService: SectionService
   ) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.loading = true;
 
+    //paralelrni fork join pristup
     forkJoin({
       products: this.productService.getProducts(),
       sections: this.sectionService.getSections()
     }).subscribe({
       next: ({ products, sections }) => {
-        this.productsByCategory = products.reduce<{ [category: string]: ProductInterface[] }>(
-            (acc, p) => {
-              (acc[p.category] = acc[p.category] || []).push(p);
-              return acc;
-            },
-            {}
-        );
+        this.productsByCategory = products.reduce<ProductsByCategory>((acc, p) => {
+          (acc[p.category] = acc[p.category] || []).push(p);
+          return acc;
+        }, {});
+
         this.sections = sections;
+
         this.loading = false;
       },
       error: err => {

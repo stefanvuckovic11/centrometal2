@@ -1,4 +1,5 @@
 @import '../../../../styles/variables';
+@import '../../../../styles/animations';
 
 .product-detail {
   &__gallery {
@@ -62,7 +63,7 @@
           &-img {
             width: 80px;
             height: 80px;
-            object-fit: cover;
+            object-fit: contain;
           }
         }
       }
@@ -70,28 +71,3 @@
   }
 }
 
-.gallery-skeleton-track-slide {
-  width: 100%;
-  height: 400px;
-  display: block;
-}
-
-@keyframes shimmer {
-  0%   { background-position: -200px 0; }
-  100% { background-position: 200px 0; }
-}
-
-.skeleton-text {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #f0f0f0;
-  background-image: linear-gradient(
-                  90deg,
-                  #f0f0f0 0px,
-                  #e0e0e0 40px,
-                  #f0f0f0 80px
-  );
-  background-size: 200px 100%;
-  background-repeat: no-repeat;
-  animation: shimmer 1.2s infinite linear;
-}

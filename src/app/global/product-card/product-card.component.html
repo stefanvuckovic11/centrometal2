@@ -25,7 +25,7 @@
         <ng-container *ngIf="product?.price as price">
             <div class="product-card__price">
         <span *ngIf="price.old" class="product-card__price--old">
-          €{{ price.old }}
+          {{ price.old }}
         </span>
                 <span class="product-card__price--new">
           €{{ price.new }}

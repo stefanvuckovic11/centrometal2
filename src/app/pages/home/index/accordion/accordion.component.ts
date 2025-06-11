@@ -9,7 +9,9 @@ import { AccordionService } from './accordion.service';
   standalone: false
 })
 export class AccordionComponent implements OnInit {
-  items: AccordionItemInterface[] = [];
+  public items: AccordionItemInterface[] = [];
+  public show = true;
+
 
   constructor(private accordionService: AccordionService) {}
 

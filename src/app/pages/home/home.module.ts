@@ -13,7 +13,6 @@ import { BrandSearchComponent } from './brand-search/brand-search.component';
 import {FormsModule} from "@angular/forms";
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { KitPromoComponent } from './kit-promo/kit-promo.component';
-import {ProductListComponent} from "../../products/product-list/product-list.component";
 
 @NgModule({
     declarations: [
@@ -36,8 +35,7 @@ import {ProductListComponent} from "../../products/product-list/product-list.com
         RouterModule,
         HomeRoutingModule,
         ProductsModule,
-        FormsModule,
-        ProductListComponent
+        FormsModule
     ]
 })
 export class HomeModule {}

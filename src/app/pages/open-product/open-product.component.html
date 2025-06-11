@@ -23,26 +23,21 @@
                         </div>
                     </div>
                 </ng-container>
+                <app-open-product-gallery [images]="product?.images"></app-open-product-gallery>
             </div>
 
             <div class="product-detail__content__info">
-                <ng-container *ngIf="product">
-                    <app-open-product-info [product]="product"></app-open-product-info>
-                </ng-container>
-                <ng-container *ngIf="!product">
-                    <div class="product-detail__info-skeleton">
-                        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__title"></div>
-                        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__price"></div>
-                        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__sku"></div>
-                        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__description"></div>
-                        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__cart"></div>
-                    </div>
-                </ng-container>
+                <app-open-product-info [product]="product"></app-open-product-info>
             </div>
         </div>
 
         <app-open-product-additional [product]="product"></app-open-product-additional>
 
+        <app-open-product-similar
+                [similarProducts]="product?.similarProducts || []"
+                [similarConfig]="product?.similarConfig || {}"
+                [productType]="product?.type"
+        ></app-open-product-similar>
         <ng-container *ngIf="product">
             <app-open-product-similar
                     [similarProducts]="product.similarProducts || []"
