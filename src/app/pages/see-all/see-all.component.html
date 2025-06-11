@@ -19,16 +19,17 @@
                 </ng-container>
             </ng-container>
             <ng-container *ngIf="!loading">
-                <ng-container *ngIf="displayedProducts.length">
+                <ng-container *ngIf="displayedProducts.length; else noProducts">
                     <ng-container *ngFor="let product of displayedProducts">
                         <app-product-card [product]="product"></app-product-card>
                     </ng-container>
                 </ng-container>
-                <ng-container *ngIf="!displayedProducts.length">
+
+                <ng-template #noProducts>
                     <p class="see-all__empty">
                         Trenutno nema dostupnih proizvoda u ovoj kategoriji.
                     </p>
-                </ng-container>
+                </ng-template>
             </ng-container>
         </div>
     </div>

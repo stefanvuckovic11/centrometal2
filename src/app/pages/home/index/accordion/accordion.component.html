@@ -6,15 +6,17 @@
     </span>
     </div>
 
-    <ng-container *ngIf="show">
-        <ng-container *ngTemplateOutlet="recursiveList; context: { items: items, level: 0 }"></ng-container>
-    </ng-container>
+    <ng-container
+            *ngTemplateOutlet="
+      recursiveList;
+      context: { items: items, level: 0 }
+    "
+    ></ng-container>
 
     <ng-template #recursiveList let-items="items" let-level="level">
         <ng-container *ngFor="let item of items">
             <div class="index__left__accordion__item">
-
-                <ng-container *ngIf="item.link; else expandableItem">
+                <ng-container *ngIf="item.link; else expandedCase">
                     <a
                             [routerLink]="item.link"
                             class="index__left__accordion__title"

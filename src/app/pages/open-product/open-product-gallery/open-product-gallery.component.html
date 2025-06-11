@@ -1,40 +1,40 @@
-<ng-container *ngIf="images?.length">
+<ng-container *ngIf="images?.length; else gallerySkeleton">
     <div class="product-detail__gallery__slider">
         <div class="product-detail__gallery__slider__track">
-            <ng-container *ngFor="let img of images; let i = index">
-                <div
-                    #trackSlide
-                    class="product-detail__gallery__slider__track-slide"
-                >
-                    <img
-                            [ngSrc]="img"
-                            [alt]="'Image ' + i"
-                            class="product-detail__gallery__slider__track-slide-img"
-                            (click)="select(i)"
-                            fill
-                    />
-                </div>
-            </ng-container>
+            <div
+                #trackSlide
+                *ngFor="let img of images; let i = index"
+                class="product-detail__gallery__slider__track-slide"
+            >
+                <img
+                        [ngSrc]="img"
+                        [alt]="'Image ' + i"
+                        (click)="select(i)"
+                        fill
+                />
+            </div>
         </div>
+
         <div class="product-detail__gallery__slider__thumbnails">
             <button
                     class="product-detail__gallery__slider__thumbnails-arrow product-detail__gallery__slider__thumbnails-arrow--prev"
                     aria-label="Previous slide"
                     (click)="prev()"
             >&lt;</button>
-            <ng-container *ngFor="let img of images; let i = index">
-                <div
-                    #thumbItem
-                    class="product-detail__gallery__slider__thumbnails-item"
-                    (click)="select(i)"
-                >
-                    <img
-                            [src]="img"
-                            [alt]="'Thumbnail ' + i"
-                            class="product-detail__gallery__slider__thumbnails-item-img"
-                    />
-                </div>
-            </ng-container>
+
+            <div
+                #thumbItem
+                *ngFor="let img of images; let i = index"
+                class="product-detail__gallery__slider__thumbnails-item"
+                (click)="select(i)"
+            >
+                <img
+                        [src]="img"
+                        [alt]="'Thumbnail ' + i"
+                        class="product-detail__gallery__slider__thumbnails-item-img"
+                />
+            </div>
+
             <button
                     class="product-detail__gallery__slider__thumbnails-arrow product-detail__gallery__slider__thumbnails-arrow--next"
                     aria-label="Next slide"
@@ -44,25 +44,17 @@
     </div>
 </ng-container>
 
-<ng-container *ngIf="!images?.length">
+<ng-template #gallerySkeleton>
     <div class="product-detail__gallery__slider">
         <div class="product-detail__gallery__slider__track">
             <div class="product-detail__gallery__slider__track-slide">
-        <span
-                class="skeleton-text"
-                style="display:block; width:100%; height:400px;"
-        ></span>
+                <span class="skeleton-text skeleton-large"></span>
             </div>
         </div>
         <div class="product-detail__gallery__slider__thumbnails">
-            <ng-container *ngFor="let _ of [0,1,2,3]">
-                <div class="product-detail__gallery__slider__thumbnails-item">
-          <span
-                  class="skeleton-text"
-                  style="display:block; width:80px; height:80px;"
-          ></span>
-                </div>
-            </ng-container>
+            <div *ngFor="let _ of [0,1,2,3]" class="product-detail__gallery__slider__thumbnails-item">
+                <span class="skeleton-text skeleton-thumb"></span>
+            </div>
         </div>
     </div>
-</ng-container>
+</ng-template>
