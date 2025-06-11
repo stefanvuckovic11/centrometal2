@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit {
       private sectionService: SectionService
   ) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.loading = true;
 
     //paralelrni fork join pristup
