@@ -1,5 +1,4 @@
 import { Component, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-video-box',

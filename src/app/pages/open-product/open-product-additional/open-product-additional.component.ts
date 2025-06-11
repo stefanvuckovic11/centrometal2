@@ -12,7 +12,7 @@ export class OpenProductAdditionalComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { }
+  public ngOnInit(): void { }
 
   setActiveTab(tab: 'proizvodna-lista' | 'guide' | 'rating' | 'email'): void {
     this.activeTab = tab;

@@ -22,7 +22,7 @@ export class OpenProductComponent implements OnInit, OnDestroy {
         private productService: ProductService
     ) {}
 
-    ngOnInit(): void {
+    public ngOnInit(): void {
         this.loadProduct();
     }
 
@@ -73,7 +73,7 @@ export class OpenProductComponent implements OnInit, OnDestroy {
             });
     }
 
-    ngOnDestroy(): void {
+    public ngOnDestroy(): void {
         this.destroy$.next();
         this.destroy$.complete();
     }
