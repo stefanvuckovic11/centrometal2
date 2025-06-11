@@ -11,7 +11,7 @@ import { Subject, takeUntil, map, take } from 'rxjs';
   standalone: false
 })
 export class OpenProductComponent implements OnInit, OnDestroy {
-  public product?: ProductInterface;
+  public product?: ProductInterface | any;
   public isLoading: boolean = true;
   public error?: string;
 

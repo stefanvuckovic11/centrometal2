@@ -31,6 +31,8 @@ export interface ProductInterface {
     reviews?: any[];
     relatedProducts?: number[];
     tabs?: any;
+    similarProducts?: any;
+    similarConfig?: any;
 }
 
 export interface ProductsByCategory {

@@ -8,7 +8,7 @@ import { ProductInterface } from '../../../interfaces/product.interface';
   standalone: false
 })
 export class OpenProductInfoComponent implements OnChanges {
-  @Input() public product!: ProductInterface;
+  @Input() public product: ProductInterface | any;
   public quantity: number = 1;
 
   public get specEntries(): Array<{ label: string; value: string }> {
@@ -17,7 +17,7 @@ export class OpenProductInfoComponent implements OnChanges {
     }
     return Object.entries(this.product.specifications).map(
         ([key, val]) => ({ label: key, value: val })
-    );
+    ) as any;
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
