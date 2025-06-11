@@ -10,9 +10,9 @@ import { AuthService, User } from '../auth.service';
   standalone: false
 })
 export class LoginComponent implements OnInit {
-  loginForm!: FormGroup;
-  errorMsg: string | null = null;
-  isLoading = false;
+  public loginForm!: FormGroup;
+  public errorMsg: string | null = null;
+  public isLoading = false;
 
   constructor(
       private fb: FormBuilder,
