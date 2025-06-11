@@ -1,11 +1,11 @@
-@import '../../../../styles/variables';
+@use '../../../../styles/variables';
 
 .newsletter {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $navbar-dark-blue;
+  background-color: variables.$navbar-dark-blue;
   color: white;
   text-align: center;
   width: 100%;
@@ -52,7 +52,7 @@
   }
 
   &__submit {
-    background-color: $general-cyan;
+    background-color: variables.$general-cyan;
     color: white;
     padding: 12px;
     border: none;

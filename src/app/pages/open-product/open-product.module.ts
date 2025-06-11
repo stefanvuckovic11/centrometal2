@@ -1,29 +1,34 @@
-import { NgModule }          from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
-import { RouterModule }      from '@angular/router';
-
-import { OpenProductComponent }          from './open-product.component';
-import { OpenProductBreadcrumbComponent } from './open-product-breadcrumb/open-product-breadcrumb.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '../../shared/shared.module';
+import { OpenProductComponent } from './open-product.component';
+import { OpenProductAdditionalComponent } from './open-product-additional/open-product-additional.component';
 import { OpenProductGalleryComponent } from './open-product-gallery/open-product-gallery.component';
-import {HomeModule} from "../home/home.module";
 import { OpenProductInfoComponent } from './open-product-info/open-product-info.component';
-import {FormsModule} from "@angular/forms";
+import { OpenProductSimilarComponent } from './open-product-similar/open-product-similar.component';
 import { VideoBoxComponent } from './video-box/video-box.component';
+import { OpenProductAdditionalComponent } from './open-product-additional/open-product-additional.component';
+import { OpenProductSimilarComponent } from './open-product-similar/open-product-similar.component';
+import {SharedModule} from "../../shared/shared.module";
 
 @NgModule({
     declarations: [
-        OpenProductComponent,
         OpenProductBreadcrumbComponent,
         OpenProductGalleryComponent,
         OpenProductInfoComponent,
-        VideoBoxComponent
+        VideoBoxComponent,
+        OpenProductAdditionalComponent,
+        OpenProductSimilarComponent,
+        OpenProductComponent
     ],
     imports: [
         CommonModule,
         RouterModule,
         NgOptimizedImage,
         HomeModule,
-        FormsModule
+        FormsModule,
+        SharedModule,
     ],
     exports: [
         OpenProductComponent

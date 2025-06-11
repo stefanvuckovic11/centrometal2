@@ -1,4 +1,4 @@
-@import "../../../styles/variables";
+@use "../../../styles/variables";
 
 .footer {
   position: relative;
@@ -65,7 +65,7 @@
   }
 
   &__bottom {
-    background-color: $general-cyan;
+    background-color: variables.$general-cyan;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -81,11 +81,11 @@
     &-column {
       flex: 1;
       max-width: 200px;
-      border-right: 1px solid $base-grey;
+      border-right: 1px solid variables.$base-grey;
       padding-left: 10px;
 
       &:first-child {
-        border-left: 1px solid $base-grey;
+        border-left: 1px solid variables.$base-grey;
         padding: 1px 4%;
         margin-left: 2%;
       }
