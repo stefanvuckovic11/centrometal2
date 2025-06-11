@@ -1,87 +1,97 @@
-<div class="product-detail__info">
-    <div class="product-detail__info__name">
-        <h1 class="product-detail__info__name__title">
-            {{ product.title }}
-        </h1>
-    </div>
+<ng-container *ngIf="product; else infoSkeleton">
+    <div class="product-detail__info">
+        <div class="product-detail__info__name">
+            <h1 class="product-detail__info__name__title">
+                {{ product.title }}
+            </h1>
+        </div>
 
-    <div class="product-detail__info__price-code">
-        <h2 class="product-detail__info__price-code__price">
-            €{{ product.price.new }}
-        </h2>
-        <h3 class="product-detail__info__price-code__sku">
-      <span class="product-detail__info__price-code__sku__number">
-        {{ product.id }}
-      </span><br>
-            Šifra artikla
-        </h3>
-    </div>
-
-    <div class="product-detail__info__general">
-        <span class="product-detail__info__general__spec">
-      {{ product.description }}
-    </span><br>
-
-        <ng-container *ngIf="specEntries.length">
-            <ng-container *ngFor="let entry of specEntries">
-        <span class="product-detail__info__general__spec">
-          • <strong>{{ entry.label | titlecase }}:</strong>
-            {{ entry.value }}
+        <div class="product-detail__info__price-code">
+            <h2 class="product-detail__info__price-code__price">
+                €{{ product.price.new }}
+            </h2>
+            <h3 class="product-detail__info__price-code__sku">
+        <span class="product-detail__info__price-code__sku__number">
+          {{ product.id }}
         </span><br>
+                Šifra artikla
+            </h3>
+        </div>
+
+        <div class="product-detail__info__general">
+      <span class="product-detail__info__general__spec">
+        {{ product.description }}
+      </span><br>
+
+            <ng-container *ngIf="specEntries.length">
+                <ng-container *ngFor="let entry of specEntries">
+          <span class="product-detail__info__general__spec">
+            • <strong>{{ entry.label | titlecase }}:</strong> {{ entry.value }}
+          </span><br>
+                </ng-container>
             </ng-container>
-        </ng-container>
-    </div>
+        </div>
 
-    <div class="product-detail__info__slider-cart">
-        <div class="product-detail__info__slider-cart__cart">
+        <div class="product-detail__info__slider-cart">
+            <div class="product-detail__info__slider-cart__cart">
 
-            <div class="product-detail__info__slider-cart__cart__upper">
-                <div class="product-detail__info__slider-cart__cart__upper__num">
-                    <p class="product-detail__info__slider-cart__cart__upper__num__label">
-                        Količina:
-                    </p>
-                    <input
-                            type="number"
-                            class="product-detail__info__slider-cart__cart__upper__num__input"
-                            [(ngModel)]="quantity"
-                            min="1"
-                            max="100"
-                    >
-                    <button
-                            class="product-detail__info__slider-cart__cart__upper__num__btn"
-                            (click)="quantity = quantity + 1"
-                    >+</button>
+                <div class="product-detail__info__slider-cart__cart__upper">
+                    <div class="product-detail__info__slider-cart__cart__upper__num">
+                        <p class="product-detail__info__slider-cart__cart__upper__num__label">
+                            Količina:
+                        </p>
+                        <input
+                                type="number"
+                                class="product-detail__info__slider-cart__cart__upper__num__input"
+                                [(ngModel)]="quantity"
+                                min="1"
+                                max="100"
+                        >
+                        <button
+                                class="product-detail__info__slider-cart__cart__upper__num__btn"
+                                (click)="quantity = quantity + 1"
+                        >+</button>
+                    </div>
+
+                    <div class="product-detail__info__slider-cart__cart__upper__share">
+            <span class="product-detail__info__slider-cart__cart__upper__share__label">
+              Share:
+            </span>
+                        <div class="product-detail__info__slider-cart__cart__upper__share__icon">
+                            <i class="fa fa-facebook-f"></i>
+                        </div>
+                        <div class="product-detail__info__slider-cart__cart__upper__share__icon">
+                            <i class="fa fa-twitter"></i>
+                        </div>
+                        <div class="product-detail__info__slider-cart__cart__upper__share__icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="product-detail__info__slider-cart__cart__upper__share__icon">
+                            <i class="fa fa-google"></i>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="product-detail__info__slider-cart__cart__upper__share">
-          <span class="product-detail__info__slider-cart__cart__upper__share__label">
-            Share:
-          </span>
-                    <div class="product-detail__info__slider-cart__cart__upper__share__icon">
-                        <i class="fa fa-facebook-f"></i>
-                    </div>
-                    <div class="product-detail__info__slider-cart__cart__upper__share__icon">
-                        <i class="fa fa-twitter"></i>
-                    </div>
-                    <div class="product-detail__info__slider-cart__cart__upper__share__icon">
-                        <i class="fa fa-envelope"></i>
-                    </div>
-                    <div class="product-detail__info__slider-cart__cart__upper__share__icon">
-                        <i class="fa fa-google"></i>
-                    </div>
+                <div class="product-detail__info__slider-cart__cart__lower">
+                    <button class="product-detail__info__slider-cart__cart__lower__add__btn">
+                        <i class="fa fa-shopping-cart"></i> Dodaj u korpu
+                    </button>
+                    <button class="product-detail__info__slider-cart__cart__lower__view__btn">
+                        Pregledaj korpu
+                    </button>
                 </div>
-            </div>
 
-            <div class="product-detail__info__slider-cart__cart__lower">
-                <button class="product-detail__info__slider-cart__cart__lower__add__btn">
-                    <i class="fa fa-shopping-cart"></i> Dodaj u korpu
-                </button>
-                <button class="product-detail__info__slider-cart__cart__lower__view__btn">
-                    Pregledaj korpu
-                </button>
             </div>
-
         </div>
     </div>
+</ng-container>
 
-</div>
+<ng-template #infoSkeleton>
+    <div class="product-detail__info-skeleton">
+        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__title"></div>
+        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__price"></div>
+        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__sku"></div>
+        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__description"></div>
+        <div class="product-detail__info-skeleton__skeleton product-detail__info-skeleton__cart"></div>
+    </div>
+</ng-template>
